@@ -1,6 +1,6 @@
 # tammam-bt.github.io
 
-[![Live](https://img.shields.io/badge/live-tammam--bt.github.io-00ff9c?style=flat-square)](https://tammam-bt.github.io)
+[![Live](https://img.shields.io/badge/live-tammam--bt.github.io-161b22?style=flat-square&logo=githubpages&logoColor=white)](https://tammam-bt.github.io)
 
 Personal portfolio site for **Tammam Benbettaieb** — CS Engineering student at ENSI, ML/AI specialist, and full-stack developer.
 
