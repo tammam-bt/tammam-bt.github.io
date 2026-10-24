@@ -1,0 +1,1528 @@
+{
+ "person": {
+  "name": "Tammam Benbettaieb",
+  "headline": "I build websites, Shopify stores and Python automation",
+  "intro": "I'm Tammam, a freelance software and automation engineer in Tunisia and a computer science engineering student at ENSI. I work alone and build stores, web apps, bots, scrapers and data pipelines.",
+  "location": "Tunisia",
+  "availability": "Available to start immediately",
+  "contact": [
+   {
+    "label": "Upwork",
+    "url": "https://upwork.com/freelancers/~01f89f51335cb70c85"
+   },
+   {
+    "label": "Email",
+    "url": "mailto:tambett10@gmail.com"
+   },
+   {
+    "label": "GitHub",
+    "url": "https://github.com/tammam-bt"
+   },
+   {
+    "label": "LinkedIn",
+    "url": "https://linkedin.com/in/tammam-bettayeb"
+   },
+   {
+    "label": "WhatsApp",
+    "url": "https://wa.me/21693290920"
+   }
+  ],
+  "portrait": "tammam-portrait.jpg"
+ },
+ "lanes": [
+  {
+   "id": "web",
+   "label": "Websites & Web Apps",
+   "blurb": "Stores, business sites and web apps, launched and handed over to you.",
+   "need": "I need a website, store or web app"
+  },
+  {
+   "id": "automation",
+   "label": "Automation, Bots & Scraping",
+   "blurb": "Bots, scrapers and background programs that keep running on their own.",
+   "need": "I need a bot, a scraper or a task automated"
+  },
+  {
+   "id": "data",
+   "label": "Data & Backend Engineering",
+   "blurb": "Data pipelines, APIs and audits where you can check each result.",
+   "need": "I need a data pipeline or a backend"
+  },
+  {
+   "id": "ai",
+   "label": "AI & Machine Learning",
+   "blurb": "Machine-learning models, and ML code I write from scratch and test against known answers.",
+   "need": "I need a machine-learning model"
+  }
+ ],
+ "proof": [
+  {
+   "value": "36 → 70",
+   "label": "Lighthouse mobile score of the new homepage after my speed fixes, Targets Unlimited",
+   "project": "01"
+  },
+  {
+   "value": "1,276",
+   "label": "products migrated through the Shopify API with zero errors, Targets Unlimited",
+   "project": "01"
+  },
+  {
+   "value": "588,748",
+   "label": "market events checked in a 24-hour test, none missed, Sorare trading bot",
+   "project": "04"
+  },
+  {
+   "value": "91%",
+   "label": "fewer API calls after running the cheapest checks first, Sorare trading bot",
+   "project": "04"
+  },
+  {
+   "value": "476 of 501",
+   "label": "bugs confirmed, with the evidence for each one, BugsInPy audit",
+   "project": "05"
+  },
+  {
+   "value": "95.2%",
+   "label": "of 495 bugs reproduced after I fixed four faults in the existing test harness, BugsInPy audit",
+   "project": "05"
+  },
+  {
+   "value": "0.98",
+   "label": "laptop matching precision (145 of 148 pairs), TuniCompare",
+   "project": "07"
+  },
+  {
+   "value": "8–64×",
+   "label": "faster predict calls than scikit-learn on small datasets, axiom-ml 0.1.1",
+   "project": "09"
+  },
+  {
+   "value": "1st of 30+",
+   "label": "Grand Prize at DataLeaders 2.0, an in-person ML competition",
+   "project": "12"
+  },
+  {
+   "value": "5.0",
+   "label": "rating on both public Upwork reviews (Targets Unlimited, Livestock Records)",
+   "project": "01"
+  }
+ ],
+ "awards": [
+  {
+   "title": "1st place, Grand Prize (30+ participants)",
+   "event": "DataLeaders 2.0",
+   "year": "2026"
+  },
+  {
+   "title": "Top 5",
+   "event": "Orbyx ML Challenge",
+   "year": "2025"
+  },
+  {
+   "title": "2nd place (60+ participants)",
+   "event": "Roboday 4.0",
+   "year": "2025"
+  }
+ ],
+ "services": [
+  {
+   "title": "Websites & web apps",
+   "blurb": "Shopify store rebuilds, bilingual business sites and web apps that work offline, set up in your own accounts.",
+   "lane": "web"
+  },
+  {
+   "title": "Bots, automation & scraping",
+   "blurb": "Discord and Telegram bots, programs that run 24/7, and scrapers that get past bot checks.",
+   "lane": "automation"
+  },
+  {
+   "title": "Data & backend engineering",
+   "blurb": "Data pipelines you can re-run and check, APIs, and integrations that stay within rate limits.",
+   "lane": "data"
+  },
+  {
+   "title": "Machine learning",
+   "blurb": "Models for tabular data, including stacking ensembles that have won competitions, and ML code I write from scratch.",
+   "lane": "ai"
+  }
+ ],
+ "projects": [
+  {
+   "num": "01",
+   "id": "targets-unlimited",
+   "title": "Targets Unlimited",
+   "type": "Client work",
+   "year": "2026",
+   "role": "Sole developer: theme, catalogue migration, performance, SEO and Printify setup",
+   "status": "Live (store rebuild published 16 September 2026)",
+   "lane": "web",
+   "lanes": [
+    "web"
+   ],
+   "tags": [
+    "E-commerce & Shopify",
+    "Frontend & Web Design",
+    "Python",
+    "Shopify Liquid",
+    "Admin GraphQL API",
+    "Lighthouse"
+   ],
+   "oneliner": "I rebuilt the live Shopify store of a US shooting-sports retailer.",
+   "summary": "I rebuilt the live Shopify store of a US shooting-sports retailer that sells through paid ads. I moved 1,276 products with zero errors and no broken landing pages, and set up its Printify apparel line.",
+   "problem": "The store sells about 1,100 shooting and outdoor products, mostly to visitors from paid ads. On a phone, old collection pages showed a banner and a block of text before any product. The catalogue had grown to 62 collections and 349 tags. A broken landing page or pixel would lose sales right away.",
+   "built": "My theme extends Empire with 43 custom Liquid sections and browsing by material, firearm and form. A Python migration moved the catalogue to 117 collections and 90 tags. I also set up the Printify apparel line at a 40% minimum margin and made a WebGL garment viewer prototype.",
+   "hard": "Ads and search land on 28 collection URLs, so I kept those URLs and titles unchanged and redirected the rest. Before publishing I compared the ad pixels and GA4 on both themes. The migration made 2,016 API writes with zero errors, and nothing was shrunk or deleted.",
+   "outcome": "Live since 16 September 2026. On the test store before launch, my speed fixes took the new homepage's mobile Lighthouse score from 36 to 70. I removed a 3.35 MB development script and delayed video loading on phones. I also wrote alt text for 975 products.",
+   "result": "I took the new homepage's mobile Lighthouse score from 36 to 70 before launch, and moved 1,276 products with zero errors.",
+   "highlights": [
+    "43 custom Liquid sections that extend the theme, so the owner's theme editor still works",
+    "Python migration of 1,276 products in 2,016 API writes, with zero errors",
+    "Kept the 28 ad landing URLs unchanged and compared pixels on both themes before publishing",
+    "Printify apparel line set up with a 40% minimum margin",
+    "Hand-written WebGL garment viewer (prototype, not on the live store)"
+   ],
+   "metrics": [
+    {
+     "value": "36 → 70",
+     "label": "Lighthouse mobile score, homepage, after my speed fixes"
+    },
+    {
+     "value": "19 → 98",
+     "label": "Lighthouse desktop score, same fixes"
+    },
+    {
+     "value": "1,276",
+     "label": "products migrated, zero errors"
+    },
+    {
+     "value": "117",
+     "label": "collections, reorganised from 62 collections and 349 tags"
+    }
+   ],
+   "quote": {
+    "text": "Haven't had a person understand and execute a concept quite so expertly.",
+    "source": "Client's public Upwork review"
+   },
+   "stack": [
+    {
+     "group": "Frontend",
+     "items": [
+      "Shopify Liquid (extending Empire)",
+      "Vanilla JavaScript",
+      "CSS design tokens",
+      "JSON-LD",
+      "WebGL (no three.js)"
+     ]
+    },
+    {
+     "group": "Backend",
+     "items": [
+      "Shopify Admin GraphQL API",
+      "Printify integration"
+     ]
+    },
+    {
+     "group": "Data",
+     "items": [
+      "Python migration scripts",
+      "NumPy",
+      "OpenCV",
+      "Pillow"
+     ]
+    },
+    {
+     "group": "Infrastructure",
+     "items": [
+      "Shopify",
+      "Shopify CLI",
+      "GitHub Pages"
+     ]
+    },
+    {
+     "group": "Tooling & testing",
+     "items": [
+      "Playwright",
+      "Lighthouse 13",
+      "GA4",
+      "Google Search Console"
+     ]
+    }
+   ],
+   "links": [
+    {
+     "label": "Live store (client-owned)",
+     "url": "https://targetsunlimited.com"
+    },
+    {
+     "label": "Homepage concept",
+     "url": "https://tammam-bt.github.io/targets-unlimited-outdoors/"
+    },
+    {
+     "label": "Apparel showcase prototype",
+     "url": "https://tammam-bt.github.io/targets-unlimited-showcase/"
+    },
+    {
+     "label": "Concept code",
+     "url": "https://github.com/tammam-bt/targets-unlimited-outdoors"
+    },
+    {
+     "label": "Showcase code",
+     "url": "https://github.com/tammam-bt/targets-unlimited-showcase"
+    }
+   ],
+   "hero": "01-targets-hero.jpg",
+   "gallery": [
+    {
+     "file": "01-targets-g1.jpg",
+     "caption": "Mega-menu: browse by material, firearm and form",
+     "kind": "desktop"
+    },
+    {
+     "file": "01-targets-g2.jpg",
+     "caption": "Steel Targets collection with filter and sort bar",
+     "kind": "desktop"
+    },
+    {
+     "file": "01-targets-g3.jpg",
+     "caption": "Steel Targets on a phone, old theme and new theme",
+     "kind": "mobile"
+    },
+    {
+     "file": "01-targets-g4.jpg",
+     "caption": "Product page on a phone with 14 kit variant tiles",
+     "kind": "mobile"
+    },
+    {
+     "file": "01-targets-g5.jpg",
+     "caption": "Apparel showcase prototype: WebGL tee viewer, not on the live store",
+     "kind": "desktop"
+    }
+   ],
+   "video": "01-targets-demo.mp4",
+   "videoCaption": "Walkthrough of the live store: mega-menu, filters, product page and zoom viewer, sped up.",
+   "featured": true
+  },
+  {
+   "num": "02",
+   "id": "policlean",
+   "title": "PoliClean Services bilingual website",
+   "type": "Client work",
+   "year": "2026",
+   "role": "Sole developer: design, build, hosting setup, DNS move and handover",
+   "status": "Live, maintained",
+   "lane": "web",
+   "lanes": [
+    "web"
+   ],
+   "tags": [
+    "Frontend & Web Design",
+    "Full-Stack",
+    "React",
+    "Vite",
+    "Tailwind CSS",
+    "Cloudflare Pages",
+    "Cloudflare D1"
+   ],
+   "oneliner": "Seven-page English and French site for a family cleaning company in Quebec.",
+   "summary": "A seven-page English and French website for a family cleaning company in Quebec, built with React on Cloudflare Pages. Each estimate request is saved to a database and emailed to the owner, so no lead is lost if the email fails.",
+   "problem": "PoliClean is a family cleaning business in Vaudreuil-Dorion, Quebec, with customers who speak English or French. The owners are often out on jobs, so the site had to collect requests they could answer later. Their Google Workspace email already ran on the domain and could not go down.",
+   "built": "A seven-page React and Vite site with all text in English and Québec French, switched with one tap. The estimate form posts to a Cloudflare Pages Function that saves the lead to D1 and emails it through Resend. The form has a honeypot, a five-per-hour limit and header-injection stripping. Our Work has drag-to-compare before/after sliders.",
+   "hard": "I moved the DNS from Squarespace to Cloudflare while the business kept receiving mail through Google Workspace. I checked the mail records first, and the site sends from a separate subdomain, so the MX records were never touched. The database write and the email run separately, so if one fails the lead is kept.",
+   "outcome": "It runs on the client's own GitHub and Cloudflare accounts, with a README and a maintenance runbook. Every push to main deploys through GitHub Actions. I still make changes on request, with 18 commits between 9 September and 6 October 2026. Traffic and leads have not been measured.",
+   "result": "Runs on the client's own Cloudflare and GitHub accounts, and I still make changes on request (18 commits, 9 September to 6 October).",
+   "highlights": [
+    "Whole site in English and Québec French with a one-tap switch",
+    "Estimate form saves every lead to a database and emails it, so none is lost if the email fails",
+    "DNS moved to Cloudflare without touching the client's Google Workspace email",
+    "Before/after sliders built from the client's own job photos",
+    "Handed over in the client's own accounts, with a runbook"
+   ],
+   "metrics": [
+    {
+     "value": "7",
+     "label": "pages, each in English and Québec French"
+    },
+    {
+     "value": "18",
+     "label": "commits between 9 September and 6 October 2026"
+    }
+   ],
+   "stack": [
+    {
+     "group": "Frontend",
+     "items": [
+      "React 18",
+      "Vite 7",
+      "React Router 7",
+      "Tailwind CSS 3",
+      "framer-motion"
+     ]
+    },
+    {
+     "group": "Backend",
+     "items": [
+      "Cloudflare Pages Function",
+      "Resend"
+     ]
+    },
+    {
+     "group": "Data",
+     "items": [
+      "Cloudflare D1 (SQLite)"
+     ]
+    },
+    {
+     "group": "Infrastructure",
+     "items": [
+      "Cloudflare Pages",
+      "Cloudflare DNS",
+      "GitHub Actions",
+      "wrangler"
+     ]
+    },
+    {
+     "group": "Tooling & testing",
+     "items": [
+      "ESLint 9",
+      "Playwright screenshots"
+     ]
+    }
+   ],
+   "links": [
+    {
+     "label": "Live site",
+     "url": "https://policleanservices.com"
+    }
+   ],
+   "hero": "02-policlean-hero.jpg",
+   "gallery": [
+    {
+     "file": "02-policlean-g1.jpg",
+     "caption": "French home hero, one tap from the English version",
+     "kind": "desktop"
+    },
+    {
+     "file": "02-policlean-g2.jpg",
+     "caption": "Drag-to-compare sliders using the client's own job photos",
+     "kind": "desktop"
+    },
+    {
+     "file": "02-policlean-g3.jpg",
+     "caption": "Home page on a phone",
+     "kind": "mobile"
+    },
+    {
+     "file": "02-policlean-g4.jpg",
+     "caption": "Phone menu with the EN and FR switch",
+     "kind": "mobile"
+    },
+    {
+     "file": "02-policlean-g5.jpg",
+     "caption": "Estimate form on a phone, filled with demo data",
+     "kind": "mobile"
+    }
+   ],
+   "video": "02-policlean-demo.mp4",
+   "videoCaption": "Phone demo: switch to French, open the estimate form and fill it with demo data. Nothing is submitted.",
+   "featured": true
+  },
+  {
+   "num": "03",
+   "id": "livestock-records",
+   "title": "Livestock Records",
+   "type": "Client work",
+   "year": "2026",
+   "role": "Sole developer, from written spec to hand-over",
+   "status": "Delivered; live in the owner's own accounts, private behind sign-in",
+   "lane": "web",
+   "lanes": [
+    "web"
+   ],
+   "tags": [
+    "Full-Stack",
+    "Frontend & Web Design",
+    "Backend & APIs",
+    "React",
+    "TypeScript",
+    "Supabase",
+    "PWA"
+   ],
+   "oneliner": "Offline phone app for a family farm, including medication withdrawal dates.",
+   "summary": "A phone app for a family farm. It records animals, treatments, medication withdrawals, breeding and births in a barn with no signal, and syncs when signal returns. I delivered it six days after the first commit.",
+   "problem": "A family farm with rabbits, sheep, goats and poultry needed records it could update from an iPhone in a barn with little signal. Some records have legal weight. A medication withdrawal date decides when meat or milk can leave the farm. The spec ran to 59 sections, and the app had to run on free tiers in the owner's own accounts.",
+   "built": "A React and TypeScript web app that installs to the home screen. Every screen reads a local copy of the data, so it works the same online or offline. Saves go into an ordered queue that uploads to Supabase when signal returns, and a banner counts the changes still waiting. The database enforces Owner, Editor and Viewer roles.",
+   "hard": "Offline saves had to be safe. Records get their IDs on the phone, so a weight logged for an animal created offline links to it before the server has seen either. The queue uploads strictly in order and sets aside a change that keeps failing, so it can't block the rest. Withdrawal dates are time-zone safe.",
+   "outcome": "Delivered on the agreed date, six days after the first commit, into the owner's own Supabase and Cloudflare accounts. The app syncs when it is open and has signal. The client's public 5.0 review: \"Very good communication and worked quickly.\"",
+   "result": "Delivered on the agreed date, six days after the first commit, into the owner's own Supabase and Cloudflare accounts.",
+   "highlights": [
+    "Every screen works from a local copy, online or offline",
+    "Ordered upload queue with a visible count of changes still waiting",
+    "Withdrawal dates shown as a live safe-from date on the treatment form",
+    "Month calendar, printable health certificates and CSV export",
+    "Row-level security enforcing Owner, Editor and Viewer roles"
+   ],
+   "metrics": [
+    {
+     "value": "6 days",
+     "label": "from first commit to delivery"
+    },
+    {
+     "value": "59",
+     "label": "sections in the written spec"
+    },
+    {
+     "value": "5.0",
+     "label": "public client review"
+    }
+   ],
+   "quote": {
+    "text": "Very good communication and worked quickly.",
+    "source": "Client's public Upwork review, 5.0"
+   },
+   "stack": [
+    {
+     "group": "Frontend",
+     "items": [
+      "React 18",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS v4",
+      "shadcn/ui"
+     ]
+    },
+    {
+     "group": "Backend",
+     "items": [
+      "Supabase (Postgres, Auth, Storage)",
+      "Row-level security",
+      "SQL migrations"
+     ]
+    },
+    {
+     "group": "Data",
+     "items": [
+      "Dexie over IndexedDB",
+      "Ordered outbox",
+      "date-fns"
+     ]
+    },
+    {
+     "group": "Infrastructure",
+     "items": [
+      "vite-plugin-pwa (Workbox)",
+      "Cloudflare Pages"
+     ]
+    },
+    {
+     "group": "Tooling & testing",
+     "items": [
+      "Vitest",
+      "Playwright",
+      "Docker-based RLS check"
+     ]
+    }
+   ],
+   "links": [],
+   "hero": "03-livestock-hero.jpg",
+   "gallery": [
+    {
+     "file": "03-livestock-g1.jpg",
+     "caption": "Home screen showing overdue items, demo data",
+     "kind": "mobile"
+    },
+    {
+     "file": "03-livestock-g2.jpg",
+     "caption": "Treatment form with a live safe-from date for withdrawals",
+     "kind": "mobile"
+    },
+    {
+     "file": "03-livestock-g3.jpg",
+     "caption": "Calendar showing a medication withdrawal end date",
+     "kind": "mobile"
+    },
+    {
+     "file": "03-livestock-g4.jpg",
+     "caption": "Breeding record carried through to a birth",
+     "kind": "mobile"
+    },
+    {
+     "file": "03-livestock-g5.jpg",
+     "caption": "Printable health and treatment certificate for one animal",
+     "kind": "mobile"
+    }
+   ],
+   "video": null,
+   "videoCaption": null,
+   "featured": true
+  },
+  {
+   "num": "04",
+   "id": "sorare-trading-bot",
+   "title": "Sorare Trading Bot",
+   "type": "Client work",
+   "year": "2026",
+   "role": "Sole developer: design, build, live validation, VPS deployment and documentation",
+   "status": "Maintained; runs in Docker on the client's VPS",
+   "lane": "automation",
+   "lanes": [
+    "automation",
+    "data"
+   ],
+   "tags": [
+    "Automation & Bots",
+    "Backend & APIs",
+    "Data Engineering & Pipelines",
+    "Python",
+    "asyncio",
+    "GraphQL",
+    "Discord",
+    "Docker"
+   ],
+   "oneliner": "Bot that watches a live card market 24/7 and alerts Discord.",
+   "summary": "A Python bot for a Sorare trader. It watches the live card market 24/7 and posts underpriced listings to Discord. In a 24-hour test run it checked 588,748 market events and missed none.",
+   "problem": "The client trades football and NBA cards and wanted to hear about a mispriced listing within seconds. The market sends every event over a WebSocket, but the raw feed needs filtering. Of the settlements, 57% are expiries that look exactly like sales, and sellers leave cards listed at prices nobody pays. The documented rate limits were also wrong.",
+   "built": "A Python asyncio service reads the stream, keeps price baselines in SQLite and checks every listing against the client's rules, each with its own Discord channel. The client edits rules with slash commands and a 5-step wizard, and changes apply on the next event with no restart. It deploys with one docker compose up -d.",
+   "hard": "The API's real rate limit didn't match its documentation, so I measured it. One key and three rotated keys were refused the same 16.7% at 300 players a minute, so the limit is per account. Stepping up the rate found the real ceiling, 200 calls a minute. A token-bucket scheduler with cheapest-first checks cut API demand by 91%.",
+   "outcome": "In a 24-hour run from an empty database, it never restarted and dropped no events. Alerts reached Discord a median 0.46 s after listing. It made 166,926 API calls at 76% of the budget with no rate-limit refusals. It runs on the client's VPS today.",
+   "result": "In a 24-hour test it missed none of 588,748 market events and alerted Discord a median 0.46 s after listing.",
+   "highlights": [
+    "Asyncio service on a GraphQL WebSocket stream, with price baselines per player",
+    "Alert rules edited from Discord with slash commands and a 5-step wizard, no restart",
+    "Measured the API's real rate limit and built a token-bucket scheduler around it",
+    "914 tests that replay recorded data, plus an in-process mock server",
+    "One-command Docker Compose deploy with a health check and automatic restart"
+   ],
+   "metrics": [
+    {
+     "value": "588,748",
+     "label": "events checked in 24 hours, none missed"
+    },
+    {
+     "value": "0.46 s",
+     "label": "median time from listing to Discord"
+    },
+    {
+     "value": "91%",
+     "label": "fewer API calls after running the cheapest checks first"
+    },
+    {
+     "value": "914",
+     "label": "automated tests"
+    }
+   ],
+   "stack": [
+    {
+     "group": "Backend",
+     "items": [
+      "Python 3.12",
+      "asyncio",
+      "websockets",
+      "aiohttp",
+      "discord.py 2.x",
+      "Sorare GraphQL"
+     ]
+    },
+    {
+     "group": "Data",
+     "items": [
+      "SQLite (WAL)",
+      "Per-sport price baselines"
+     ]
+    },
+    {
+     "group": "Infrastructure",
+     "items": [
+      "Docker Compose",
+      "Ubuntu VPS",
+      "Heartbeat healthcheck"
+     ]
+    },
+    {
+     "group": "Tooling & testing",
+     "items": [
+      "uv",
+      "pytest",
+      "GitHub Actions",
+      "ruff"
+     ]
+    }
+   ],
+   "links": [],
+   "hero": "04-sorare-hero.jpg",
+   "gallery": [
+    {
+     "file": "04-sorare-g1.jpg",
+     "caption": "The bot's slash commands in a demo Discord server",
+     "kind": "desktop"
+    }
+   ],
+   "video": null,
+   "videoCaption": null,
+   "featured": true
+  },
+  {
+   "num": "05",
+   "id": "bugsinpy-audit",
+   "title": "BugsInPy Audit",
+   "type": "Client work",
+   "year": "2026",
+   "role": "Sole developer: extractor, environment builder, run pipeline, validator and reports",
+   "status": "Delivered",
+   "lane": "data",
+   "lanes": [
+    "data"
+   ],
+   "tags": [
+    "Data Engineering & Pipelines",
+    "Python",
+    "ast",
+    "git plumbing",
+    "micromamba",
+    "pytest"
+   ],
+   "oneliner": "Reproducible audit of 501 Python bugs, with evidence for every verdict.",
+   "summary": "For a PhD researcher, I built a reproducible pipeline that extracts, rebuilds and re-tests all 501 bugs in the public BugsInPy benchmark. Each bug has an evidence-backed verdict: 476 confirmed, 19 unconfirmed, 6 not reproduced.",
+   "problem": "BugsInPy is a public benchmark of 501 real bugs from 17 Python projects. For each bug, the researcher needed to know whether the buggy code can be cut out exactly as it was before the fix, and whether it fails before the fix and passes after in a fresh run. The old environments no longer install cleanly.",
+   "built": "My extractor uses Python's ast module to read source from git objects and find the smallest complete function or class around each change. An environment builder recreates each bug's exact interpreter. A resumable runner tests the buggy and fixed versions and records a verdict with an evidence path. Finally, a validator re-checks every row, file and checksum offline.",
+   "hard": "A provenance check compares every extracted file with the blob the patch names. It caught six defects in the benchmark's own data. Running the other 495 bugs showed four faults in the existing harness, which had blocked 26 of them. I applied each fix only after the client approved its exact sha256.",
+   "outcome": "All 501 bugs have a recorded outcome. With the original harness, 90.5% of 495 bugs reproduced. With its four faults fixed, 95.2% did, a total that matches the 95% a 2023 study reached with a different toolchain. A second extraction matched the first on all 2,540 files.",
+   "result": "476 of 501 bugs confirmed, each with its evidence. Fixing four harness faults raised the reproduced share from 90.5% to 95.2%.",
+   "highlights": [
+    "ast-based extractor reading straight from git objects",
+    "Rebuilds each bug's exact interpreter from conda-forge lock files or a CPython source build",
+    "Resumable runner with a time limit per bug, recording a verdict and evidence path for each one",
+    "Offline validator with a self-test of 109 deliberately broken fixtures",
+    "Provenance check that caught six defects in the benchmark's own data"
+   ],
+   "metrics": [
+    {
+     "value": "476 of 501",
+     "label": "bugs confirmed"
+    },
+    {
+     "value": "95.2%",
+     "label": "reproduced after fixing four harness faults (471 of 495)"
+    },
+    {
+     "value": "2,540",
+     "label": "files re-extracted with 0 mismatches"
+    },
+    {
+     "value": "372",
+     "label": "tests passing in the final package"
+    }
+   ],
+   "stack": [
+    {
+     "group": "Backend",
+     "items": [
+      "Python (ast, subprocess, hashlib)",
+      "git plumbing",
+      "bash"
+     ]
+    },
+    {
+     "group": "Data",
+     "items": [
+      "CSV and JSONL audit tables",
+      "JUnit XML parsing",
+      "sha256 checksum inventory"
+     ]
+    },
+    {
+     "group": "Infrastructure",
+     "items": [
+      "Linux server",
+      "micromamba",
+      "CPython source builds"
+     ]
+    },
+    {
+     "group": "Tooling & testing",
+     "items": [
+      "pytest",
+      "109-fixture validator self-test"
+     ]
+    }
+   ],
+   "links": [
+    {
+     "label": "BugsInPy, the public benchmark (context only)",
+     "url": "https://github.com/soarsmu/BugsInPy"
+    }
+   ],
+   "hero": "05-bugsinpy-hero.jpg",
+   "gallery": [
+    {
+     "file": "05-bugsinpy-g1.jpg",
+     "caption": "The six-stage pipeline from bug metadata to offline validator",
+     "kind": "chart"
+    },
+    {
+     "file": "05-bugsinpy-g2.jpg",
+     "caption": "Verdicts for each of the 17 projects",
+     "kind": "chart"
+    },
+    {
+     "file": "05-bugsinpy-g3.jpg",
+     "caption": "Defects caught by the provenance check, and the harness faults",
+     "kind": "chart"
+    }
+   ],
+   "video": null,
+   "videoCaption": null,
+   "featured": true
+  },
+  {
+   "num": "06",
+   "id": "sahara-camp",
+   "title": "Sahara Camp multilingual booking site",
+   "type": "Personal project",
+   "year": "2026",
+   "role": "Sole developer (all 17 commits, 3 to 8 July 2026)",
+   "status": "Live",
+   "lane": "web",
+   "lanes": [
+    "web"
+   ],
+   "tags": [
+    "Frontend & Web Design",
+    "HTML",
+    "CSS",
+    "Vanilla JavaScript",
+    "i18n and RTL",
+    "Netlify"
+   ],
+   "oneliner": "Booking site for a desert camp in five languages, including right-to-left Arabic.",
+   "summary": "A one-page booking site for a desert camp near Douz, Tunisia, in five languages including right-to-left Arabic. Guests choose a tent and dates in a three-step form, and the finished request goes to the camp on WhatsApp.",
+   "problem": "A desert camp sells stays to travellers from several countries. Most browse on a phone, often on a slow connection, and the camp confirms bookings over WhatsApp. A contact form that sends an email would add a step where someone copies the request into WhatsApp by hand.",
+   "built": "One static page with no framework and no build step. It has the camp's story, two tent types, six activities, a gallery and a map. All text sits in one translation file for English, French, German, Russian and Arabic, and Arabic flips the layout right to left. Booking takes three steps and ends in a ready-written WhatsApp message.",
+   "hard": "The booking flow had to work in five languages with no backend. Form errors go through one translation helper, so guests read them in their own language. The WhatsApp message keeps one fixed English layout for the owner and no emoji, which some apps garbled after URL encoding.",
+   "outcome": "Live on Netlify, with security and cache headers, search-engine structured data, Open Graph tags, a sitemap and a custom 404 page. It's about 6,400 lines, with nothing to install. A help widget gives pre-written answers to seven common questions. Traffic and bookings have not been measured.",
+   "result": "Live on Netlify in five languages, including right-to-left Arabic. Each booking reaches the camp as a ready-written WhatsApp message.",
+   "highlights": [
+    "Five languages from one translation file, with a full right-to-left layout for Arabic",
+    "Three-step booking with an inline calendar and a price estimate",
+    "Booking ends in a pre-written WhatsApp message, with no backend",
+    "Help widget with seven pre-written answers in every language",
+    "Security headers, structured data, sitemap and Open Graph tags"
+   ],
+   "metrics": [
+    {
+     "value": "5",
+     "label": "languages, including right-to-left Arabic"
+    },
+    {
+     "value": "3",
+     "label": "booking steps, ending in a ready-written WhatsApp message"
+    },
+    {
+     "value": "6,400",
+     "label": "lines, with no framework or build step"
+    }
+   ],
+   "stack": [
+    {
+     "group": "Frontend",
+     "items": [
+      "HTML5",
+      "CSS3 with design tokens and RTL rules",
+      "Vanilla JavaScript (ES6+)",
+      "Litepicker",
+      "JSON-LD"
+     ]
+    },
+    {
+     "group": "Data",
+     "items": [
+      "translations.js (5 locales)"
+     ]
+    },
+    {
+     "group": "Infrastructure",
+     "items": [
+      "Netlify static hosting",
+      "WhatsApp"
+     ]
+    }
+   ],
+   "links": [
+    {
+     "label": "Live site",
+     "url": "https://saharacamp.netlify.app/"
+    },
+    {
+     "label": "Code",
+     "url": "https://github.com/tammam-bt/sahara-camp"
+    }
+   ],
+   "hero": "06-sahara-hero.jpg",
+   "gallery": [
+    {
+     "file": "06-sahara-g1.jpg",
+     "caption": "The same hero in Arabic, with the layout mirrored",
+     "kind": "desktop"
+    },
+    {
+     "file": "06-sahara-g2.jpg",
+     "caption": "Phone menu with the five language buttons",
+     "kind": "mobile"
+    },
+    {
+     "file": "06-sahara-g3.jpg",
+     "caption": "Arabic hero on a phone",
+     "kind": "mobile"
+    },
+    {
+     "file": "06-sahara-g4.jpg",
+     "caption": "Booking summary on a phone, ready to send on WhatsApp",
+     "kind": "mobile"
+    },
+    {
+     "file": "06-sahara-g5.jpg",
+     "caption": "Booking summary on desktop",
+     "kind": "desktop"
+    }
+   ],
+   "video": "06-sahara-demo.mp4",
+   "videoCaption": "Desktop demo: switch to French and Arabic, then run a booking up to the summary. Nothing is sent.",
+   "featured": false
+  },
+  {
+   "num": "07",
+   "id": "tunicompare",
+   "title": "TuniCompare",
+   "type": "Personal project",
+   "year": "2025",
+   "role": "Sole developer",
+   "status": "Live; the hosted demo runs on a historical price snapshot (August 2025)",
+   "lane": "automation",
+   "lanes": [
+    "automation",
+    "data",
+    "web"
+   ],
+   "tags": [
+    "Web Scraping & Data Extraction",
+    "Data Engineering & Pipelines",
+    "Full-Stack",
+    "Python",
+    "Flask",
+    "BeautifulSoup",
+    "SQLite"
+   ],
+   "oneliner": "Real-time price comparison across three Tunisian retailers that share no product codes.",
+   "summary": "A real-time price comparison site for laptops, desktops and screens across three Tunisian retailers. It scrapes each store and matches listings for the same product without a shared ID. The hosted demo runs on a historical snapshot (August 2025).",
+   "problem": "Comparing a gaming laptop's price in Tunisia means opening three store sites. Each describes the same machine with different titles, field names, units and spellings, and none share a product code.",
+   "built": "A Python pipeline feeds a Flask site. Three scrapers use regular expressions to pull CPU, GPU, RAM, storage and screen specs out of product titles. A loader puts them into one format per category, and a matcher pairs each Tunisianet product with its closest Mytek and Scoop Gaming listing. The site shows three prices side by side, cheapest highlighted.",
+   "hard": "Each candidate pair gets a fuzzy title score plus a spec check written for its category, and only pairs above a threshold count as the same product. Conflicting specs reject a pair, and an offer bundled with Windows counts as a different product. Specs are normalized first, so the check compares actual values.",
+   "outcome": "After fixing the matcher, I labelled every matched pair by hand. Laptop precision is 0.98 (145 of 148), up from 0.525 on a sample of 40 before the fix. Desktops and screens are both at 1.00. The 2025 scrape holds 1,278 listings, and in October 2026 I moved the site to Vercel.",
+   "result": "After I fixed the matching, laptop precision rose from 0.525 to 0.98. I checked every matched pair by hand.",
+   "highlights": [
+    "Three scrapers pulling specs out of free-text product titles",
+    "Category-specific spec comparison plus fuzzy title scoring to match products",
+    "Matched pairs labelled by hand to measure precision before and after the fix",
+    "Infinite-scroll comparison grid that highlights the cheapest store",
+    "Moved from Postgres on Render to a read-only SQLite file on Vercel, with 48 tests"
+   ],
+   "metrics": [
+    {
+     "value": "0.525 → 0.98",
+     "label": "laptop matching precision, before (a sample of 40) and after the fix (every pair checked)"
+    },
+    {
+     "value": "1.00",
+     "label": "precision on desktops (25 of 25) and screens (14 of 14)"
+    },
+    {
+     "value": "1,278",
+     "label": "listings scraped across three stores, 2025"
+    },
+    {
+     "value": "48",
+     "label": "automated tests"
+    }
+   ],
+   "stack": [
+    {
+     "group": "Frontend",
+     "items": [
+      "Jinja2",
+      "Vanilla JavaScript",
+      "IntersectionObserver infinite scroll"
+     ]
+    },
+    {
+     "group": "Backend",
+     "items": [
+      "Python 3.12",
+      "Flask 3.1",
+      "SQLAlchemy 2.0"
+     ]
+    },
+    {
+     "group": "Data",
+     "items": [
+      "requests",
+      "BeautifulSoup4",
+      "regex spec extraction",
+      "RapidFuzz",
+      "SQLite"
+     ]
+    },
+    {
+     "group": "Infrastructure",
+     "items": [
+      "Vercel",
+      "previously Render"
+     ]
+    },
+    {
+     "group": "Tooling & testing",
+     "items": [
+      "pytest (48 tests)"
+     ]
+    }
+   ],
+   "links": [
+    {
+     "label": "Live demo (August 2025 snapshot)",
+     "url": "https://tunicompare.vercel.app/"
+    },
+    {
+     "label": "Code",
+     "url": "https://github.com/tammam-bt/TuniCompare"
+    }
+   ],
+   "hero": "07-tunicompare-hero.jpg",
+   "gallery": [
+    {
+     "file": "07-tunicompare-g1.jpg",
+     "caption": "Top of the home page",
+     "kind": "desktop"
+    },
+    {
+     "file": "07-tunicompare-g2.jpg",
+     "caption": "Screen rows with three store prices side by side",
+     "kind": "desktop"
+    },
+    {
+     "file": "07-tunicompare-g3.jpg",
+     "caption": "Laptop rows, cheapest store highlighted",
+     "kind": "desktop"
+    },
+    {
+     "file": "07-tunicompare-g4.jpg",
+     "caption": "One comparison row at full size",
+     "kind": "desktop"
+    },
+    {
+     "file": "07-tunicompare-g5.jpg",
+     "caption": "Screen list on a phone, one card per product",
+     "kind": "mobile"
+    }
+   ],
+   "video": "07-tunicompare-demo.mp4",
+   "videoCaption": "Browse the featured price cards, scroll the screens list, then open a laptop row with three prices.",
+   "featured": true
+  },
+  {
+   "num": "08",
+   "id": "calendar-assistant",
+   "title": "Telegram Calendar Assistant",
+   "type": "Personal project",
+   "year": "2025",
+   "role": "Sole developer",
+   "status": "Prototype; runs locally, not hosted",
+   "lane": "automation",
+   "lanes": [
+    "automation",
+    "ai"
+   ],
+   "tags": [
+    "Automation & Bots",
+    "Python",
+    "Backend & APIs",
+    "Machine Learning & AI",
+    "python-telegram-bot",
+    "Google Calendar API",
+    "OAuth2",
+    "OpenRouter"
+   ],
+   "oneliner": "Telegram bot that uses AI to turn plain messages into Google Calendar events.",
+   "summary": "A Telegram bot that manages Google Calendar from plain messages. A language model turns \"meeting with Ali tomorrow at 2 PM\" into a real event. I also built a Telegram AI chat bot with memory.",
+   "problem": "Calendar apps make you fill in forms. I wanted to type \"I'm meeting my friend Ali tomorrow at 2 PM\" into Telegram, see it appear in Google Calendar, and then change or cancel it the same way. Most of the work is turning the model's free-text reply into calls that change a real calendar.",
+   "built": "The bot is a python-telegram-bot app. /connect runs Google's OAuth2 consent once and refreshes the token when it expires. Every other message goes to a language model through OpenRouter with a strict prompt. It asks for one of four actions (create, list, update, delete) plus title, place and local times. The bot parses that reply, calls the Google Calendar API and keeps history in SQLite.",
+   "hard": "A small model's output had to be safe to act on. The prompt allows only four actions. It forces \"N/A\" for anything the user didn't say and \"Error\" when a request is too vague, so a vague message changes nothing. For updates and deletes, the bot looks the event up by title first and refuses if nothing matches.",
+   "outcome": "A working prototype with public code. In the recorded demo, creating, moving, listing and deleting events all work. While recording it in October 2026, I fixed three bugs: moving an event to another day, timezone offsets, and a false \"created\" reply. It runs on my machine and is not hosted.",
+   "result": "Create, move, list and delete all work in the recorded demo. It's a prototype that runs on my machine, not hosted.",
+   "highlights": [
+    "Google OAuth2 consent flow with token refresh",
+    "Prompt that makes the model pick one of four fixed actions or refuse",
+    "Updates and deletes look the event up first and refuse if nothing matches",
+    "Times resolved in the calendar's own timezone",
+    "Companion AI chat bot with per-user memory in SQLite"
+   ],
+   "metrics": [
+    {
+     "value": "4",
+     "label": "calendar actions the model may choose from"
+    }
+   ],
+   "stack": [
+    {
+     "group": "Backend",
+     "items": [
+      "Python 3",
+      "python-telegram-bot",
+      "OpenAI SDK via OpenRouter",
+      "Google Calendar API v3",
+      "google-auth-oauthlib"
+     ]
+    },
+    {
+     "group": "Data",
+     "items": [
+      "SQLite"
+     ]
+    }
+   ],
+   "links": [
+    {
+     "label": "Calendar assistant code",
+     "url": "https://github.com/tammam-bt/telegram-task-scheduler-bot"
+    },
+    {
+     "label": "AI chat bot code",
+     "url": "https://github.com/tammam-bt/telegram-ai-bot"
+    }
+   ],
+   "hero": "08-telegram-hero.jpg",
+   "gallery": [
+    {
+     "file": "08-telegram-g1.jpg",
+     "caption": "Welcome message with setup steps and example requests",
+     "kind": "desktop"
+    },
+    {
+     "file": "08-telegram-g2.jpg",
+     "caption": "Help message listing the calendar actions and examples",
+     "kind": "mobile"
+    },
+    {
+     "file": "08-telegram-g3.jpg",
+     "caption": "Creating an event and asking what is on, in plain messages",
+     "kind": "desktop"
+    },
+    {
+     "file": "08-telegram-g4.jpg",
+     "caption": "All four steps confirmed: create, list, move, cancel",
+     "kind": "desktop"
+    }
+   ],
+   "video": "08-telegram-demo.mp4",
+   "videoCaption": "Book a dentist appointment, ask what is on, move it to Friday, then cancel it, all by message.",
+   "featured": false
+  },
+  {
+   "num": "09",
+   "id": "axiom-ml",
+   "title": "Axiom (axiom-ml)",
+   "type": "Personal project",
+   "year": "2026",
+   "role": "Sole developer",
+   "status": "Prototype: 0.1.1 on PyPI, 0.1.2 on GitHub main",
+   "lane": "ai",
+   "lanes": [
+    "ai"
+   ],
+   "tags": [
+    "Machine Learning & AI",
+    "Python",
+    "NumPy",
+    "PyPI",
+    "backpropagation"
+   ],
+   "oneliner": "A machine-learning library written from scratch in NumPy, published on PyPI.",
+   "summary": "I wrote a machine-learning library in Python and NumPy with no ML framework, published on PyPI as axiom-ml. It has neural networks with hand-written backpropagation, plus linear and logistic regression. Version 0.1.2 on GitHub adds decision trees and gradient boosting.",
+   "problem": "I wanted to see each step of training, including every gradient and weight update and why the starting weights matter. With no autograd, nothing catches a wrong derivative, so training just drifts and you have to find out why.",
+   "built": "The package needs only NumPy and installs with pip install axiom-ml. It has neural networks (Dense and activation layers, four losses, momentum, L2, automatic He, Xavier or LeCun initialisation), linear and logistic regression, decision trees, gradient boosting, optimisers, scalers and encoders. XGBoost-style and LightGBM-style boosters and linear trees are modules I'm building.",
+   "hard": "I wrote backpropagation by hand. When a sigmoid output feeds binary cross-entropy, the combined derivative reduces to (prediction − target) / batch size, and the model detects that pairing and uses the short form. I tested the maths against known answers. A linear layer must land on the normal-equation solution, and a small sigmoid network must learn XOR.",
+   "outcome": "First commit to PyPI release took just over three weeks. In my benchmark on small datasets, predict calls ran 8× to 64× faster than scikit-learn (0.1.1, median of five seeds), because they skip scikit-learn's input checks. Fitting the linear models is slower, and gradient boosting in 0.1.2 predicts about 7× slower.",
+   "result": "In my benchmark (0.1.1), predict calls ran 8× to 64× faster than scikit-learn on small datasets, because they skip its input checks.",
+   "highlights": [
+    "Backpropagation derived and written by hand, with no autograd",
+    "Checked against known answers: closed-form least squares, XOR, a TensorFlow reference",
+    "Trees and gradient boosting (regression and binary classification) in v0.1.2",
+    "NumPy as the only runtime dependency",
+    "Published to PyPI with a src layout and an MIT licence"
+   ],
+   "metrics": [
+    {
+     "value": "8–64×",
+     "label": "faster predict calls than scikit-learn on small datasets (0.1.1)"
+    },
+    {
+     "value": "3 weeks",
+     "label": "first commit to PyPI release"
+    },
+    {
+     "value": "1",
+     "label": "runtime dependency: NumPy"
+    }
+   ],
+   "stack": [
+    {
+     "group": "Data",
+     "items": [
+      "Python 3",
+      "NumPy"
+     ]
+    },
+    {
+     "group": "Infrastructure",
+     "items": [
+      "setuptools",
+      "pyproject.toml",
+      "PyPI",
+      "MIT licence"
+     ]
+    },
+    {
+     "group": "Tooling & testing",
+     "items": [
+      "XOR and linear-consistency tests",
+      "TensorFlow and scikit-learn as test references"
+     ]
+    }
+   ],
+   "links": [
+    {
+     "label": "PyPI: axiom-ml",
+     "url": "https://pypi.org/project/axiom-ml/"
+    },
+    {
+     "label": "Code",
+     "url": "https://github.com/tammam-bt/Axiom"
+    }
+   ],
+   "hero": "09-axiom-hero.jpg",
+   "gallery": [
+    {
+     "file": "09-axiom-g1.jpg",
+     "caption": "Training loss and decision boundaries produced by the library",
+     "kind": "chart"
+    },
+    {
+     "file": "09-axiom-g2.jpg",
+     "caption": "Score, fit time and predict time against scikit-learn (0.1.1)",
+     "kind": "chart"
+    },
+    {
+     "file": "09-axiom-g3.jpg",
+     "caption": "Terminal after pip install axiom-ml: training, then predictions",
+     "kind": "desktop"
+    }
+   ],
+   "video": "09-axiom-demo.mp4",
+   "videoCaption": "A clean virtualenv: pip install axiom-ml, then train an XOR network and a logistic regression.",
+   "featured": false
+  },
+  {
+   "num": "10",
+   "id": "fannen-tn",
+   "title": "Fannen.tn artisan showcase",
+   "type": "Personal project",
+   "year": "2026",
+   "role": "Backend and database lead in a team of three; author of every commit in the public repo",
+   "status": "Prototype: the full app runs locally on PHP and MySQL; a static UI preview is live",
+   "lane": "web",
+   "lanes": [
+    "web"
+   ],
+   "tags": [
+    "Full-Stack",
+    "Backend & APIs",
+    "PHP",
+    "MySQL",
+    "Vanilla JavaScript",
+    "PDO"
+   ],
+   "oneliner": "PHP and MySQL site where Tunisian artisans show work and buyers message them.",
+   "summary": "A course project at ENSI with two classmates, where Tunisian artisans show their work and buyers contact them directly. I built the PHP API and MySQL schema behind the role-based dashboards, messaging and appreciation badges.",
+   "problem": "Our web development course at ENSI asked for a complete app in plain HTML, CSS, JavaScript, PHP and MySQL, with no frameworks. We chose Tunisian craft, where potters and weavers had no modern place to show work or receive inquiries. There is no checkout on purpose. Buyers message the artisan.",
+   "built": "One login serves two roles, artisan and enthusiast. I wrote the PHP JSON API, 15 endpoint scripts on a six-table MySQL schema with PDO prepared statements. They cover login, artworks, uploads, profiles, follows, saves, kudos, messages and dashboard stats. I also wrote the JavaScript for the filterable gallery, two-pane inbox and role-aware dashboards.",
+   "hard": "One login serves both roles, so an enthusiast must never reach artisan actions. At login the server reads the role from the database, never from the form, and keeps it in the session. Every write endpoint checks it, so a non-artisan gets a 403 on upload or delete, and delete only touches the artisan's own rows.",
+   "outcome": "I finished the backend in May 2026, and the code is public. It runs locally on PHP and MySQL and is not hosted. A static preview on Netlify shows the interface only. It has no real users. A one-time setup script creates the schema and adds demo accounts.",
+   "result": "My 15-endpoint PHP API was finished in May 2026 and runs locally. A static preview of the interface is live on Netlify.",
+   "highlights": [
+    "15 native PHP endpoints on a six-table MySQL schema",
+    "Server-side role checks: a non-artisan gets a 403 on upload or delete",
+    "Four Kudos badges instead of star ratings",
+    "Inbox that checks for new messages every 3 seconds",
+    "Setup script that builds the schema and seeds demo accounts in minutes"
+   ],
+   "metrics": [
+    {
+     "value": "15",
+     "label": "PHP endpoint scripts"
+    },
+    {
+     "value": "6",
+     "label": "MySQL tables"
+    },
+    {
+     "value": "3 s",
+     "label": "inbox polling interval"
+    }
+   ],
+   "stack": [
+    {
+     "group": "Frontend",
+     "items": [
+      "HTML5",
+      "CSS3",
+      "Vanilla JavaScript (Fetch API)"
+     ]
+    },
+    {
+     "group": "Backend",
+     "items": [
+      "PHP 8",
+      "PHP sessions",
+      "password_hash",
+      "multipart image upload"
+     ]
+    },
+    {
+     "group": "Data",
+     "items": [
+      "MySQL / MariaDB",
+      "PDO prepared statements"
+     ]
+    },
+    {
+     "group": "Infrastructure",
+     "items": [
+      "Apache via XAMPP",
+      "Netlify (static preview)"
+     ]
+    }
+   ],
+   "links": [
+    {
+     "label": "Code",
+     "url": "https://github.com/tammam-bt/Fannen.tn"
+    },
+    {
+     "label": "Static UI preview (no backend)",
+     "url": "https://fannentn.netlify.app/"
+    }
+   ],
+   "hero": "10-fannen-hero.jpg",
+   "gallery": [
+    {
+     "file": "10-fannen-g1.jpg",
+     "caption": "Gallery feed in the static preview, sample data",
+     "kind": "desktop"
+    },
+    {
+     "file": "10-fannen-g2.jpg",
+     "caption": "Gallery filtered to Ceramics without a page reload",
+     "kind": "desktop"
+    },
+    {
+     "file": "10-fannen-g3.jpg",
+     "caption": "Artwork page with artisan card, kudos and inquiry button",
+     "kind": "desktop"
+    }
+   ],
+   "video": "10-fannen-demo.mp4",
+   "videoCaption": "Static preview with sample data: filter the gallery, open an artwork, the story page and the sign-in.",
+   "featured": false
+  },
+  {
+   "num": "11",
+   "id": "marcaria-scraper",
+   "title": "Marcaria TLD Scraper",
+   "type": "Client work (off-platform)",
+   "year": "2025",
+   "role": "Sole developer",
+   "status": "Delivered",
+   "lane": "automation",
+   "lanes": [
+    "automation"
+   ],
+   "tags": [
+    "Web Scraping & Data Extraction",
+    "Automation & Bots",
+    "Python",
+    "Selenium",
+    "undetected-chromedriver",
+    "BeautifulSoup"
+   ],
+   "oneliner": "Selenium scraper that collects 1,183 domain extensions from a Cloudflare-protected site.",
+   "summary": "For a client, I built a Python scraper that collects the domain extensions sold on Marcaria.com, with each one's registration link and eligibility rules, from pages behind Cloudflare's bot check. The delivered list holds 1,183 unique extensions.",
+   "problem": "The client needed Marcaria's catalogue of domain extensions, with each one's eligibility rules, as a spreadsheet. The site is behind Cloudflare's bot check and the catalogue is split into three sections. An extension's rules only appear in a pop-up after a click.",
+   "built": "Three Selenium scrapers, one per section, run Chrome through undetected-chromedriver so it passes the bot check like a normal visitor. For every extension marked as having requirements, the country and generic scrapers open the pop-up and read its text with BeautifulSoup. A merge script then combines the results into one CSV without duplicates.",
+   "hard": "The rules aren't in the page source. They only load into a pop-up after a real click on the requirements link. So the scraper scrolls the link into view, sends a mouse event and checks the pop-up for up to 20 seconds. When Cloudflare shows \"Just a moment\", it waits instead of failing the run.",
+   "outcome": "The delivered file lists 1,183 unique extensions. Of these, 326 carry the registry's eligibility rules as text, from local-presence and citizenship rules to trademark routes.",
+   "result": "Delivered a CSV of 1,183 unique domain extensions from a Cloudflare-protected site, 326 with the registry's eligibility rules as text.",
+   "highlights": [
+    "Passes Cloudflare's bot check with undetected-chromedriver and waits out challenge pages",
+    "Click-triggered pop-ups read with real mouse events and 20-second polling",
+    "Three per-section scrapers merged into one deduplicated CSV",
+    "Eligibility rules stored as written, one field per extension"
+   ],
+   "metrics": [
+    {
+     "value": "1,183",
+     "label": "unique domain extensions delivered"
+    },
+    {
+     "value": "326",
+     "label": "with registry eligibility rules as text"
+    },
+    {
+     "value": "837",
+     "label": "with no registration requirements"
+    },
+    {
+     "value": "20",
+     "label": "in non-Latin scripts"
+    }
+   ],
+   "stack": [
+    {
+     "group": "Backend",
+     "items": [
+      "Python 3",
+      "Selenium 4",
+      "undetected-chromedriver",
+      "BeautifulSoup4"
+     ]
+    },
+    {
+     "group": "Data",
+     "items": [
+      "CSV",
+      "ReportLab (PDF export)"
+     ]
+    }
+   ],
+   "links": [
+    {
+     "label": "Code",
+     "url": "https://github.com/tammam-bt/marcaria-tld-scraper"
+    }
+   ],
+   "hero": "11-marcaria-hero.jpg",
+   "gallery": [
+    {
+     "file": "11-marcaria-g1.jpg",
+     "caption": "A requirements pop-up on the site and the CSV row it becomes",
+     "kind": "chart"
+    },
+    {
+     "file": "11-marcaria-g2.jpg",
+     "caption": "Pipeline from the bot-protected catalogue to one spreadsheet",
+     "kind": "chart"
+    }
+   ],
+   "video": null,
+   "videoCaption": null,
+   "featured": false
+  },
+  {
+   "num": "12",
+   "id": "competitions",
+   "title": "Competition record",
+   "type": "Competition",
+   "year": "2025–2026",
+   "role": "Entrant at DataLeaders 2.0 and Orbyx; team member at Roboday 4.0",
+   "status": "Placements confirmed; all three were in-person events with results announced on site",
+   "lane": "ai",
+   "lanes": [
+    "ai"
+   ],
+   "tags": [
+    "Machine Learning & AI",
+    "Python",
+    "XGBoost",
+    "LightGBM",
+    "CatBoost",
+    "stacking ensemble"
+   ],
+   "oneliner": "1st at DataLeaders 2.0, Top 5 at Orbyx, 2nd at Roboday 4.0.",
+   "summary": "In my first year at ENSI I placed 1st of 30+ at DataLeaders 2.0 with a three-layer stacking ensemble, Top 5 at the Orbyx ML Challenge, and 2nd of 60+ at Roboday 4.0 with a robotics team.",
+   "problem": "All three were in-person events with results announced on site. DataLeaders 2.0 and the Orbyx ML Challenge were machine-learning competitions, and Orbyx asked entrants to classify planets as livable or not. Roboday 4.0 was a robotics event.",
+   "built": "For DataLeaders 2.0 I built a three-layer stacking ensemble: XGBoost, LightGBM and CatBoost as base models, and a meta-model combining their predictions. For Orbyx I wrote a custom classifier. At Roboday 4.0 I was on a robotics team.",
+   "hard": "In stacking, several kinds of model make predictions and a meta-model combines them. I built mine for DataLeaders, to a deadline, in a ranked competition.",
+   "outcome": "DataLeaders 2.0 (January 2026): 1st of 30+, Grand Prize, with accuracy 9% above the other competitors and more than 30% above the baseline models. Orbyx ML Challenge (November 2025): Top 5, accuracy 20% above baseline. Roboday 4.0 (November 2025): 2nd of 60+.",
+   "result": "Placed 1st of 30+ at DataLeaders 2.0, with accuracy 9% above the other competitors.",
+   "highlights": [
+    "1st place and Grand Prize at DataLeaders 2.0 with a stacking ensemble",
+    "Top 5 at the Orbyx ML Challenge with a custom classifier",
+    "2nd place at Roboday 4.0 with a robotics team",
+    "Also competed at the DataQuest hackathon, with a FastAPI app around a gradient-boosted model"
+   ],
+   "metrics": [
+    {
+     "value": "1st of 30+",
+     "label": "DataLeaders 2.0, January 2026"
+    },
+    {
+     "value": "Top 5",
+     "label": "Orbyx ML Challenge, November 2025"
+    },
+    {
+     "value": "2nd of 60+",
+     "label": "Roboday 4.0, November 2025"
+    }
+   ],
+   "stack": [
+    {
+     "group": "Data",
+     "items": [
+      "XGBoost",
+      "LightGBM",
+      "CatBoost",
+      "pandas"
+     ]
+    }
+   ],
+   "links": [
+    {
+     "label": "DataQuest hackathon code (also competed)",
+     "url": "https://github.com/tammam-bt/DataQuest"
+    }
+   ],
+   "hero": "12-competitions-hero.jpg",
+   "gallery": [
+    {
+     "file": "12-competitions-g1.jpg",
+     "caption": "On stage at DataLeaders 2.0 as Grand Prize winner",
+     "kind": "desktop"
+    },
+    {
+     "file": "12-competitions-g2.jpg",
+     "caption": "Holding the winner's certificate",
+     "kind": "desktop"
+    },
+    {
+     "file": "12-competitions-g3.jpg",
+     "caption": "Presenting at the board",
+     "kind": "desktop"
+    },
+    {
+     "file": "12-competitions-g4.jpg",
+     "caption": "The certificate, 17 January 2026, organiser signatures blurred",
+     "kind": "desktop"
+    }
+   ],
+   "video": null,
+   "videoCaption": null,
+   "featured": false
+  }
+ ]
+}

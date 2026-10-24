@@ -1,28 +1,36 @@
 # Portfolio
 
-[![Live](https://img.shields.io/badge/live-tammam--bt.github.io-161b22?style=flat-square&logo=githubpages&logoColor=white)](https://tammam-bt.github.io)
+[![Live](https://img.shields.io/badge/live-tammam--bt.github.io-087556?style=flat-square&logo=githubpages&logoColor=white)](https://tammam-bt.github.io)
 
-Personal portfolio site for **Tammam Benbettaieb** — CS Engineering student at ENSI, ML/AI specialist, and full-stack developer.
+Freelance portfolio for **Tammam Benbettaieb**, software and automation engineer in Tunisia: websites, Shopify stores and Python automation.
 
 ## Tech Stack
 
-Vanilla HTML + CSS + JavaScript — zero dependencies, no build tools, no server required.
+Vanilla HTML + CSS + JavaScript. No dependencies, no build step. Content lives in one JSON file.
 
 ## Quick Start
 
-Open `index.html` in any browser.
+```sh
+python3 -m http.server 8000   # then open http://localhost:8000
+```
+
+The page loads `data/projects.json` with `fetch`, so open it through a local server rather than `file://`.
 
 ## Deployment
 
-Push to `main` — auto-deploys to GitHub Pages.
+Push to `main`; GitHub Pages serves the repository root.
 
 ## Project Structure
 
 ```
-├── index.html     # Single-page entrypoint
-├── css/styles.css # Dark developer-themed design system
-├── js/main.js     # Typing animation, scroll-spy, reveal effects
-└── assets/        # Favicon, profile image, resume PDF
+├── index.html           # Page shell, meta and Open Graph tags
+├── css/styles.css       # Light design system (tokens on :root)
+├── js/main.js           # Rendering, hash routes (#<project id>), pop-up, image viewer
+├── data/projects.json   # All content: person, lanes, projects
+└── assets/
+    ├── media/           # Project screenshots and demo videos
+    ├── og-image.jpg     # Social preview (1200×630)
+    └── favicon.svg
 ```
 
 ## License
