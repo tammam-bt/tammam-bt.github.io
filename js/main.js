@@ -1,12 +1,12 @@
-/* Tammam Benbettaieb · portfolio
+/* Tammam Bettayeb · portfolio
  *
  * One page, hash routes:  ""  → Home   ·   "#<project id>" → that project's page.
  * Home anchors (#work, #contact, #quotes) stay on Home and scroll to the section.
  * Unknown hashes fall back to Home.
- * All content comes from data/projects.json. This file only adds headings and labels (COPY).
+ * All content comes from data/projects.json. This file only adds headings, labels and the hero lines (COPY).
  *
- * Sections: config · copy · helpers · data · media frames · home · pop-up ·
- *           project page · image viewer · contact · router · boot
+ * Sections: config · copy · helpers · data · media frames · home (hero, picker, cards) ·
+ *           pop-up · project page · image viewer · contact · router · boot
  */
 (() => {
   'use strict';
@@ -16,7 +16,8 @@
   const CONFIG = {
     dataUrl: 'data/projects.json',
     mediaBase: 'assets/media/',
-    heroProjectNum: '01',
+    // Below this width a demo film plays its short square cut instead of the long 16:9 one.
+    phoneQuery: '(max-width: 640px)',
     // A phone screenshot is only framed as a phone when it is this tall (width / height).
     phoneRatioMax: 0.62,
   };
@@ -27,13 +28,15 @@
   };
 
   /* ------------------------------------------------------------------ copy */
-  // Headings and labels only. Hero lines reuse words from person.headline / person.intro.
+  // Headings, labels and the hero lines.
 
   const COPY = {
-    heroLine: "I'm Tammam, a freelance software and automation engineer in Tunisia.",
-    credentials: [
-      { text: '5.0 on both public Upwork reviews', href: '#quotes' },
-      { text: '1st of 30+, DataLeaders 2.0 ML competition', open: 'competitions' },
+    heroTitle: 'You describe the problem, I build the solution tailored for your needs.',
+    heroLine: 'Websites and Shopify stores · Bots and automation · Data pipelines and scrapers · AI and machine-learning solutions',
+    role: 'Freelance software engineer',
+    proof: [
+      { text: '100% Job Success', label: '100% Job Success on Upwork' },
+      { text: '5-star rated', label: '5-star rated on Upwork', stars: 5 },
     ],
     pickerTitle: 'What do you need?',
     everything: 'Show all projects',
@@ -44,7 +47,6 @@
     projects: 'projects',
     demo: 'Demo',
     result: 'Result',
-    openProject: 'Open project',
     hireLong: 'Hire me on Upwork',
     built: 'What I built',
     stack: 'Stack',
@@ -69,8 +71,6 @@
     stackTitle: 'Built with',
     previous: 'Previous',
     next: 'Next',
-    pause: 'Pause',
-    play: 'Play',
     channels: { email: 'Email', whatsapp: 'WhatsApp', github: 'GitHub', linkedin: 'LinkedIn' },
   };
 
@@ -120,24 +120,43 @@
     chevronRight: '<path d="m9 6 6 6-6 6"/>',
     lock: '<rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/>',
     play: '<path d="M8 5.5v13l10.5-6.5z" fill="currentColor" stroke="none"/>',
-    pause: '<path d="M7.5 5h3v14h-3zM13.5 5h3v14h-3z" fill="currentColor" stroke="none"/>',
-    mail: '<rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/>',
   };
 
-  function icon(name, size = 16) {
+  // Filled marks (fill comes from a CSS token on the class).
+  const MARKS = {
+    // Upwork logo mark (simple-icons).
+    upwork: 'M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-1.141 2.546-2.547 2.548-1.405-.002-2.543-1.143-2.545-2.548V3.492H0v7.112c0 2.914 2.37 5.303 5.281 5.303 2.913 0 5.283-2.389 5.283-5.303v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.797l1.213-5.71c1.063.679 2.285 1.109 3.686 1.109 3 0 5.439-2.452 5.439-5.45 0-3-2.439-5.439-5.439-5.439z',
+    star: 'M12 1.8l3.09 6.26 6.91 1-5 4.87 1.18 6.88L12 17.56l-6.18 3.25L7 13.93 2 9.06l6.91-1z',
+  };
+
+  function svgBase(size) {
     const svg = document.createElementNS(SVG_NS, 'svg');
     svg.setAttribute('viewBox', '0 0 24 24');
     svg.setAttribute('width', size);
     svg.setAttribute('height', size);
+    svg.setAttribute('aria-hidden', 'true');
+    svg.setAttribute('focusable', 'false');
+    return svg;
+  }
+
+  function icon(name, size = 16) {
+    const svg = svgBase(size);
     svg.setAttribute('fill', 'none');
     svg.setAttribute('stroke', 'currentColor');
     svg.setAttribute('stroke-width', '2');
     svg.setAttribute('stroke-linecap', 'round');
     svg.setAttribute('stroke-linejoin', 'round');
-    svg.setAttribute('aria-hidden', 'true');
-    svg.setAttribute('focusable', 'false');
     svg.setAttribute('class', 'icon');
     svg.innerHTML = ICONS[name]; // trusted constants only
+    return svg;
+  }
+
+  function mark(name, size, className) {
+    const svg = svgBase(size);
+    svg.setAttribute('class', className);
+    const path = document.createElementNS(SVG_NS, 'path');
+    path.setAttribute('d', MARKS[name]);
+    svg.append(path);
     return svg;
   }
 
@@ -153,6 +172,9 @@
 
   const plural = (n, one, many) => `${n} ${n === 1 ? one : many}`;
 
+  // "A · B" that never wraps around the dot: a break falls inside A instead.
+  const joinDot = (a, b) => `${a} · ${b}`;
+
   /* ------------------------------------------------------------------ data */
 
   const state = {
@@ -166,34 +188,36 @@
   const isSiteLink = (link) => /\b(live|preview)\b/i.test(link.label) && !/(github\.com|pypi\.org)/i.test(link.url);
 
   function prepare(raw) {
-    const lanes = raw.lanes || [];
-    const laneById = new Map(lanes.map((lane) => [lane.id, lane]));
     const projects = (raw.projects || []).map((p, index) => {
       const site = (p.links || []).find(isSiteLink);
-      const host = site ? hostOf(site.url) : '';
-      const gallery = p.gallery || [];
-      const phoneOnly = gallery.length > 0 && gallery.every((g) => g.kind === 'mobile');
+      const thumbs = Array.isArray(p.thumb) ? p.thumb : [p.thumb || p.hero];
       return Object.assign({}, p, {
         index,
-        host,
+        host: site ? hostOf(site.url) : '',
         lanes: p.lanes || [p.lane],
         links: p.links || [],
-        gallery,
-        laneLabel: (laneById.get(p.lane) || {}).label || '',
+        gallery: p.gallery || [],
         stackFlat: Array.from(new Set((p.stack || []).flatMap((group) => group.items))),
-        // Card media: phone-only projects show two phone screens, others their hero.
-        cardMedia: !host && phoneOnly
-          ? { kind: 'phones', images: gallery.slice(0, 2) }
-          : { kind: host ? 'browser' : 'plain', image: p.hero },
+        thumb: { files: thumbs, pos: p.thumbPos || '50% 0%' },
       });
     });
+    const byId = new Map(projects.map((p) => [p.id, p]));
     return {
       person: raw.person,
-      lanes,
+      lanes: prepareLanes(raw, projects, byId),
       projects,
-      byId: new Map(projects.map((p) => [p.id, p])),
+      byId,
       contact: indexContacts((raw.person && raw.person.contact) || []),
     };
+  }
+
+  /** Each lane lists its projects by id, in order; without a list, a lane takes the projects that name it. */
+  function prepareLanes(raw, projects, byId) {
+    return (raw.lanes || []).map((lane) => Object.assign({}, lane, {
+      projects: Array.isArray(lane.projects)
+        ? lane.projects.map((id) => byId.get(id)).filter(Boolean)
+        : projects.filter((p) => p.lanes.includes(lane.id)),
+    }));
   }
 
   function indexContacts(list) {
@@ -204,7 +228,6 @@
     return {
       upwork: out.upwork ? out.upwork.url : '#contact',
       email,
-      emailUrl: out.email ? out.email.url : '',
       whatsapp: out.whatsapp ? { url: out.whatsapp.url, text: formatPhone(wa) } : null,
       github: out.github ? { url: out.github.url, text: hostOf(out.github.url) } : null,
       linkedin: out.linkedin ? { url: out.linkedin.url, text: hostOf(out.linkedin.url) } : null,
@@ -216,24 +239,30 @@
     return m ? `+${m[1]} ${m[2]} ${m[3]} ${m[4]}` : `+${digits}`;
   }
 
-  const heroProject = () => state.data.projects.find((p) => p.num === CONFIG.heroProjectNum) || state.data.projects[0];
+  const laneById = (id) => state.data.lanes.find((lane) => lane.id === id) || null;
 
-  function matches(project, need) {
-    return need === 'all' || project.lanes.includes(need);
+  /** The lane a project is shown under: its own lane if that lane lists it, else the first lane listing it. */
+  function laneOf(p) {
+    const lanes = state.data.lanes;
+    return lanes.find((lane) => lane.id === p.lane && lane.projects.includes(p))
+      || lanes.find((lane) => lane.projects.includes(p))
+      || null;
   }
 
-  const shownProjects = () => state.data.projects.filter((p) => matches(p, state.need));
+  function shownProjects() {
+    const lane = state.need === 'all' ? null : laneById(state.need);
+    return lane ? lane.projects : state.data.projects;
+  }
 
   function needOptions() {
-    const all = state.data.projects;
     const lanes = state.data.lanes.map((lane) => ({
       id: lane.id,
       phrase: lane.need,
-      rest: lane.need.replace(/^I need\s+/i, ''),
+      hint: lane.hint || '',
       label: lane.label,
-      count: all.filter((p) => matches(p, lane.id)).length,
+      count: lane.projects.length,
     }));
-    const everything = { id: 'all', phrase: COPY.everything, rest: COPY.everything, label: COPY.allWork, count: all.length };
+    const everything = { id: 'all', phrase: COPY.everything, hint: '', label: COPY.allWork, count: state.data.projects.length };
     return { lanes, everything };
   }
 
@@ -243,10 +272,15 @@
     return h('img', { src: mediaUrl(file), alt: alt || '', loading: eager ? 'eager' : 'lazy', decoding: 'async' });
   }
 
+  // A demo film comes in two cuts: the long 16:9 one, and a short square one for phones.
+  const phoneScreen = window.matchMedia(CONFIG.phoneQuery);
+  const filmCut = () => (phoneScreen.matches ? 'square' : 'wide');
+
   function videoEl(p, { controls = true, autoplay = true } = {}) {
+    const cut = p.film ? p.film[filmCut()] || p.film.wide : null;
     const video = h('video', {
-      src: mediaUrl(p.video),
-      poster: mediaUrl(p.hero),
+      src: mediaUrl(cut ? cut.src : p.video),
+      poster: mediaUrl(cut ? cut.poster : p.hero),
       preload: 'metadata',
       playsinline: true,
       loop: true,
@@ -260,13 +294,13 @@
     return video;
   }
 
-  function frame(kind, content, { host = '', action = null } = {}) {
+  function frame(kind, content, { host = '' } = {}) {
     const screen = h('div', { class: 'frame-screen' }, content);
     if (kind !== 'browser') return h('div', { class: `frame frame--${kind}` }, screen);
     const bar = h('div', { class: 'frame-bar' },
       h('span', { class: 'frame-dots', 'aria-hidden': 'true' }, h('span'), h('span'), h('span')),
       host ? h('span', { class: 'frame-url' }, icon('lock', 11), h('span', { class: 'frame-host' }, host)) : null,
-      action || h('span', { class: 'frame-spacer', 'aria-hidden': 'true' }));
+      h('span', { class: 'frame-spacer', 'aria-hidden': 'true' }));
     return h('div', { class: 'frame frame--browser' }, bar, screen);
   }
 
@@ -287,11 +321,24 @@
   const heroKind = (p) => (p.host ? 'browser' : 'plain');
   const videoKind = (p) => (/^phone\b/i.test(p.videoCaption || '') ? 'phone' : heroKind(p));
 
-  /** The main media for the pop-up and project page: the demo video, else the hero image. */
+  /** The main media for the pop-up and project page: the demo film or video, else the hero image. */
   function mainMedia(p, { eager = false } = {}) {
+    // A film draws its own browser and phone frames, so it sits in a plain frame with no plate.
+    if (p.film) {
+      return h('div', { class: `stage stage--fit stage--film stage--film-${filmCut()}`, dataset: { film: p.id } },
+        frame('plain', videoEl(p)));
+    }
     const kind = p.video ? videoKind(p) : heroKind(p);
     const content = p.video ? videoEl(p) : image(p.hero, `${p.title}, main screenshot`, { eager });
     return h('div', { class: `stage stage--fit stage--${kind}` }, frame(kind, content, { host: p.host }));
+  }
+
+  /** When the screen crosses the phone width, swap each showing film for the other cut. */
+  function swapFilmCuts() {
+    for (const stage of $$('[data-film]')) {
+      const p = state.data && state.data.byId.get(stage.dataset.film);
+      if (p) stage.replaceWith(mainMedia(p));
+    }
   }
 
   function galleryFrameInfo(p, item) {
@@ -314,29 +361,44 @@
     renderClosing();
   }
 
+  /** Headline, line and the needs picker on the left; the portrait with the proof items on the right. */
   function renderHero() {
-    const person = state.data.person;
     setChildren($('#hero'), h('div', { class: 'wrap' },
       h('div', { class: 'hero-grid' },
         h('div', { class: 'hero-copy' },
-          availability(),
-          h('h1', { class: 'hero-title' }, person.headline),
+          availability({ location: false }),
+          h('h1', { class: 'hero-title' }, COPY.heroTitle),
           h('p', { class: 'hero-line' }, COPY.heroLine),
-          credentials(),
           picker()),
-        demo(heroProject()))));
+        h('div', { class: 'hero-media' }, me()))));
   }
 
-  function availability() {
+  function availability({ location = true } = {}) {
     const person = state.data.person;
-    return h('p', { class: 'eyebrow' }, h('span', { class: 'status-dot', 'aria-hidden': 'true' }), `${person.availability} · ${person.location}`);
+    return h('p', { class: 'eyebrow' }, h('span', { class: 'status-dot', 'aria-hidden': 'true' }),
+      location ? joinDot(person.availability, person.location) : person.availability);
   }
 
-  function credentials() {
-    const links = COPY.credentials.map((item) => (item.open
-      ? h('a', { href: `#${item.open}`, dataset: { open: item.open } }, item.text)
-      : h('a', { href: item.href }, item.text)));
-    return h('p', { class: 'credentials' }, links);
+  /** Portrait with his name and role, then the proof items. */
+  function me() {
+    const person = state.data.person;
+    return h('div', { class: 'me' },
+      h('img', { class: 'me-photo', src: mediaUrl(person.portrait), alt: person.name, width: 600, height: 750, decoding: 'async' }),
+      h('div', { class: 'me-text' },
+        h('p', { class: 'me-name' }, person.name),
+        h('p', { class: 'me-role' }, joinDot(COPY.role, person.location)),
+        proof()));
+  }
+
+  /** The two proof items, each a link to his Upwork profile. */
+  function proof() {
+    const url = state.data.contact.upwork;
+    return h('ul', { class: 'proof' }, COPY.proof.map((item) => h('li', null,
+      h('a', { class: 'proof-item', href: url, target: '_blank', rel: 'noopener', 'aria-label': item.label },
+        mark('upwork', 18, 'upwork-mark'),
+        item.stars ? h('span', { class: 'stars', 'aria-hidden': 'true' },
+          Array.from({ length: item.stars }, () => mark('star', 14, 'star'))) : null,
+        h('span', { class: 'proof-text' }, item.text)))));
   }
 
   function hireButton({ large = false } = {}) {
@@ -346,30 +408,6 @@
       target: '_blank',
       rel: 'noopener',
     }, COPY.hireLong);
-  }
-
-  function demo(p) {
-    const video = videoEl(p, { controls: false });
-    const label = h('span', null, video.autoplay ? COPY.pause : COPY.play);
-    const glyph = h('span', { class: 'frame-action-icon' }, icon(video.autoplay ? 'pause' : 'play', 12));
-    const toggle = h('button', { type: 'button', class: 'frame-action', 'aria-label': `${video.autoplay ? COPY.pause : COPY.play} demo video` }, glyph, label);
-    const sync = () => {
-      const playing = !video.paused;
-      label.textContent = playing ? COPY.pause : COPY.play;
-      glyph.replaceChildren(icon(playing ? 'pause' : 'play', 12));
-      toggle.setAttribute('aria-label', `${playing ? COPY.pause : COPY.play} demo video`);
-    };
-    toggle.addEventListener('click', () => {
-      if (video.paused) video.play().catch(() => {}); else video.pause();
-    });
-    video.addEventListener('play', sync);
-    video.addEventListener('pause', sync);
-
-    return h('figure', { class: 'demo' },
-      h('div', { class: 'stage stage--fit' }, frame('browser', video, { host: p.host, action: toggle })),
-      h('figcaption', { class: 'demo-caption' },
-        h('span', null, h('strong', null, p.title), ` · ${p.videoCaption || ''}`),
-        h('a', { class: 'text-link', href: `#${p.id}`, dataset: { open: p.id } }, COPY.openProject, icon('arrowRight'))));
   }
 
   /** The needs picker: one big choice per lane, then "Show all projects". */
@@ -382,7 +420,9 @@
       'aria-pressed': String(state.need === o.id),
       onClick: () => setNeed(o.id, { scroll: true }),
     },
-    h('span', { class: 'need-phrase' }, o.phrase),
+    h('span', { class: 'need-text' },
+      h('span', { class: 'need-phrase' }, o.phrase),
+      o.hint ? h('span', { class: 'need-hint' }, o.hint) : null),
     h('span', { class: 'need-count label' }, String(o.count), h('span', { class: 'need-unit' }, ` ${o.count === 1 ? COPY.project : COPY.projects}`)),
     icon('arrowRight'));
     return h('div', { class: 'picker' },
@@ -413,39 +453,44 @@
     if (!status) return;
     const total = state.data.projects.length;
     const shown = shownProjects().length;
-    if (state.need === 'all') {
+    const lane = state.need === 'all' ? null : laneById(state.need);
+    if (!lane) {
       status.replaceChildren(h('strong', { dataset: { count: shown } }, String(shown)), ` ${COPY.projects}`);
     } else {
-      const lane = state.data.lanes.find((l) => l.id === state.need);
-      status.replaceChildren(h('strong', { dataset: { count: shown } }, String(shown)), ` of ${total} ${COPY.projects} for “${lane ? lane.need : ''}”`);
+      status.replaceChildren(h('strong', { dataset: { count: shown } }, String(shown)), ` of ${total} ${COPY.projects} for “${lane.need}”`);
     }
-    $('#work-reset').hidden = state.need === 'all';
+    $('#work-reset').hidden = !lane;
   }
 
   function renderGrid() {
     setChildren($('#project-grid'), h('ul', { class: 'cards' }, shownProjects().map(card)));
   }
 
-  function cardStage(p) {
-    const m = p.cardMedia;
-    const stage = h('div', { class: `stage stage--card stage--${m.kind}`, 'aria-hidden': 'true' });
-    if (m.kind === 'phones') {
-      for (const shot of m.images) stage.append(frame('phone', image(shot.file, '')));
-    } else {
-      stage.append(frame(m.kind, image(m.image, ''), { host: p.host }));
-    }
-    if (p.video) stage.append(h('span', { class: 'badge' }, icon('play', 11), COPY.demo));
-    return stage;
+  /**
+   * A card preview fills one 16:10 box edge to edge with the project's `thumb` (two phone screens
+   * side by side when `thumb` lists two), cropped at `thumbPos`, with the domain over the image.
+   */
+  function preview(p) {
+    const { files, pos } = p.thumb;
+    const shot = h('div', { class: `preview-shot${files.length > 1 ? ' preview-shot--pair' : ''}` },
+      files.map((file) => {
+        const img = image(file, '');
+        img.style.objectPosition = pos;
+        return img;
+      }));
+    return h('div', { class: 'preview', 'aria-hidden': 'true' },
+      shot,
+      p.host ? h('span', { class: 'preview-tag' }, p.host) : null,
+      p.video ? h('span', { class: 'badge' }, icon('play', 11), COPY.demo) : null);
   }
 
   function card(p) {
     return h('li', { class: 'card', dataset: { project: p.id } },
-      cardStage(p),
-      h('div', { class: 'card-body' },
-        h('h3', { class: 'card-title' }, h('a', { href: `#${p.id}`, dataset: { open: p.id } }, p.title)),
-        h('p', { class: 'card-meta label' }, `${p.type} · ${p.year}`),
-        h('p', { class: 'card-oneliner' }, p.oneliner),
-        h('p', { class: 'card-result' }, h('span', { class: 'result-label label' }, COPY.result), p.result)));
+      preview(p),
+      h('h3', { class: 'card-title' }, h('a', { href: `#${p.id}`, dataset: { open: p.id } }, p.title)),
+      h('p', { class: 'card-meta label' }, `${p.type} · ${p.year}`),
+      h('p', { class: 'card-oneliner' }, p.oneliner),
+      h('p', { class: 'card-result' }, p.result));
   }
 
   /* --------------------------------------------------------------- pop-up */
@@ -479,13 +524,13 @@
 
   function renderPopup() {
     const p = popup.list[popup.index];
-    const lane = state.need === 'all' ? '' : ` · ${(state.data.lanes.find((l) => l.id === state.need) || {}).label || ''}`;
-    $('#popup-pos').textContent = `${popup.index + 1} of ${popup.list.length}${popup.list.length === state.data.projects.length ? '' : lane}`;
+    const filtered = popup.list.length !== state.data.projects.length;
+    const lane = filtered ? laneById(state.need) : null;
+    $('#popup-pos').textContent = `${popup.index + 1} of ${popup.list.length}${lane ? ` · ${lane.label}` : ''}`;
     const body = $('#popup-body');
     body.replaceChildren(...popupContent(p));
     body.scrollTop = 0;
-    const full = $('#popup-full');
-    full.href = `#${p.id}`;
+    $('#popup-full').href = `#${p.id}`;
     popup.el.dataset.project = p.id;
   }
 
@@ -584,6 +629,7 @@
     const prev = all[(i - 1 + all.length) % all.length];
     const next = all[(i + 1) % all.length];
     const media = mainMedia(p, { eager: true });
+    const lane = laneOf(p);
 
     $('#view-project').replaceChildren(
       h('article', { class: 'project', 'aria-labelledby': 'project-title' },
@@ -593,7 +639,7 @@
             h('span', { 'aria-hidden': 'true' }, '/'),
             h('span', { 'aria-current': 'page' }, p.title)),
           h('header', { class: 'project-head' },
-            h('p', { class: 'label' }, `${p.num} · ${p.laneLabel}`),
+            h('p', { class: 'label' }, [p.num, lane ? lane.label : ''].filter(Boolean).join(' · ')),
             h('h1', { class: 'project-title', id: 'project-title', tabindex: '-1' }, p.title),
             h('p', { class: 'project-lede' }, p.oneliner)),
           facts(p),
@@ -743,7 +789,11 @@
       quotes,
       h('div', { class: 'contact-card' },
         h('h2', { class: 'contact-title', id: 'contact-title' }, COPY.contactTitle),
-        h('p', { class: 'contact-avail' }, h('span', { class: 'status-dot', 'aria-hidden': 'true' }), `${person.availability} · ${person.location}`),
+        h('div', { class: 'contact-person' },
+          person.avatar ? h('img', { class: 'avatar avatar--contact', src: mediaUrl(person.avatar), alt: '', width: 340, height: 340, loading: 'lazy', decoding: 'async' }) : null,
+          h('div', null,
+            h('p', { class: 'contact-name' }, person.name),
+            h('p', { class: 'contact-avail' }, h('span', { class: 'status-dot', 'aria-hidden': 'true' }), joinDot(person.availability, person.location)))),
         hireButton({ large: true }),
         h('ul', { class: 'channels' },
           c.email ? channel(COPY.channels.email,
@@ -847,6 +897,7 @@
       window.scrollTo({ top: 0, behavior: reducedMotion() ? 'auto' : 'smooth' });
     });
     window.addEventListener('hashchange', route);
+    phoneScreen.addEventListener('change', swapFilmCuts);
   }
 
   function fillStatic() {

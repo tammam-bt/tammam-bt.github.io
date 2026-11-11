@@ -1,6 +1,6 @@
 {
  "person": {
-  "name": "Tammam Benbettaieb",
+  "name": "Tammam Bettayeb",
   "headline": "I build websites, Shopify stores and Python automation",
   "intro": "I'm Tammam, a freelance software and automation engineer in Tunisia and a computer science engineering student at ENSI. I work alone and build stores, web apps, bots, scrapers and data pipelines.",
   "location": "Tunisia",
@@ -27,32 +27,62 @@
     "url": "https://wa.me/21693290920"
    }
   ],
-  "portrait": "tammam-portrait.jpg"
+  "portrait": "tammam-portrait-4x5.jpg",
+  "avatar": "tammam-avatar.jpg"
  },
  "lanes": [
   {
    "id": "web",
-   "label": "Websites & Web Apps",
+   "label": "Websites & web apps",
    "blurb": "Stores, business sites and web apps, launched and handed over to you.",
-   "need": "I need a website, store or web app"
+   "need": "I need a website, store or web app",
+   "hint": "Shopify stores, business sites, booking sites, web apps",
+   "projects": [
+    "targets-unlimited",
+    "policlean",
+    "livestock-records",
+    "sahara-camp",
+    "tunicompare",
+    "fannen-tn"
+   ]
   },
   {
    "id": "automation",
-   "label": "Automation, Bots & Scraping",
+   "label": "Automation & bots",
    "blurb": "Bots, scrapers and background programs that keep running on their own.",
-   "need": "I need a bot, a scraper or a task automated"
+   "need": "I need a manual task automated",
+   "hint": "Bots, scrapers, alerts and scheduled jobs",
+   "projects": [
+    "sorare-trading-bot",
+    "tunicompare",
+    "calendar-assistant",
+    "marcaria-scraper"
+   ]
   },
   {
    "id": "data",
-   "label": "Data & Backend Engineering",
+   "label": "Data",
    "blurb": "Data pipelines, APIs and audits where you can check each result.",
-   "need": "I need a data pipeline or a backend"
+   "need": "I need data collected, matched or checked",
+   "hint": "Scrapers, pipelines, APIs and data audits",
+   "projects": [
+    "sorare-trading-bot",
+    "bugsinpy-audit",
+    "tunicompare",
+    "marcaria-scraper"
+   ]
   },
   {
    "id": "ai",
-   "label": "AI & Machine Learning",
+   "label": "AI & ML solutions",
    "blurb": "Machine-learning models, and ML code I write from scratch and test against known answers.",
-   "need": "I need a machine-learning model"
+   "need": "I need an AI or machine-learning solution",
+   "hint": "AI assistants, custom models and ML code",
+   "projects": [
+    "calendar-assistant",
+    "axiom-ml",
+    "competitions"
+   ]
   }
  ],
  "proof": [
@@ -271,6 +301,8 @@
     }
    ],
    "hero": "01-targets-hero.jpg",
+   "thumb": "01-targets-hero.jpg",
+   "thumbPos": "50% 0%",
    "gallery": [
     {
      "file": "01-targets-g1.jpg",
@@ -298,8 +330,18 @@
      "kind": "desktop"
     }
    ],
-   "video": "01-targets-demo.mp4",
-   "videoCaption": "Walkthrough of the live store: mega-menu, filters, product page and zoom viewer, sped up.",
+   "video": "01-targets-film.mp4",
+   "videoCaption": "The rebuild, page by page: what was wrong on the old store, and how today's live store fixes it.",
+   "film": {
+    "wide": {
+     "src": "01-targets-film.mp4",
+     "poster": "01-targets-film.jpg"
+    },
+    "square": {
+     "src": "01-targets-film-1x1.mp4",
+     "poster": "01-targets-film-1x1.jpg"
+    }
+   },
    "featured": true
   },
   {
@@ -395,6 +437,8 @@
     }
    ],
    "hero": "02-policlean-hero.jpg",
+   "thumb": "02-policlean-hero.jpg",
+   "thumbPos": "50% 50%",
    "gallery": [
     {
      "file": "02-policlean-g1.jpg",
@@ -524,6 +568,11 @@
    ],
    "links": [],
    "hero": "03-livestock-hero.jpg",
+   "thumb": [
+    "03-livestock-g1.jpg",
+    "03-livestock-g3.jpg"
+   ],
+   "thumbPos": "50% 0%",
    "gallery": [
     {
      "file": "03-livestock-g1.jpg",
@@ -649,6 +698,8 @@
    ],
    "links": [],
    "hero": "04-sorare-hero.jpg",
+   "thumb": "04-sorare-hero.jpg",
+   "thumbPos": "100% 50%",
    "gallery": [
     {
      "file": "04-sorare-g1.jpg",
@@ -752,6 +803,8 @@
     }
    ],
    "hero": "05-bugsinpy-hero.jpg",
+   "thumb": "05-bugsinpy-hero.jpg",
+   "thumbPos": "0% 50%",
    "gallery": [
     {
      "file": "05-bugsinpy-g1.jpg",
@@ -857,6 +910,8 @@
     }
    ],
    "hero": "06-sahara-hero.jpg",
+   "thumb": "06-sahara-hero.jpg",
+   "thumbPos": "50% 50%",
    "gallery": [
     {
      "file": "06-sahara-g1.jpg",
@@ -995,6 +1050,8 @@
     }
    ],
    "hero": "07-tunicompare-hero.jpg",
+   "thumb": "07-tunicompare-hero.jpg",
+   "thumbPos": "50% 0%",
    "gallery": [
     {
      "file": "07-tunicompare-g1.jpg",
@@ -1098,6 +1155,8 @@
     }
    ],
    "hero": "08-telegram-hero.jpg",
+   "thumb": "08-telegram-hero.jpg",
+   "thumbPos": "60% 50%",
    "gallery": [
     {
      "file": "08-telegram-g1.jpg",
@@ -1207,6 +1266,8 @@
     }
    ],
    "hero": "09-axiom-hero.jpg",
+   "thumb": "09-axiom-hero.jpg",
+   "thumbPos": "0% 50%",
    "gallery": [
     {
      "file": "09-axiom-g1.jpg",
@@ -1320,6 +1381,8 @@
     }
    ],
    "hero": "10-fannen-hero.jpg",
+   "thumb": "10-fannen-g1.jpg",
+   "thumbPos": "50% 0%",
    "gallery": [
     {
      "file": "10-fannen-g1.jpg",
@@ -1417,6 +1480,8 @@
     }
    ],
    "hero": "11-marcaria-hero.jpg",
+   "thumb": "11-marcaria-hero.jpg",
+   "thumbPos": "0% 50%",
    "gallery": [
     {
      "file": "11-marcaria-g1.jpg",
@@ -1498,6 +1563,8 @@
     }
    ],
    "hero": "12-competitions-hero.jpg",
+   "thumb": "12-competitions-g1.jpg",
+   "thumbPos": "50% 15%",
    "gallery": [
     {
      "file": "12-competitions-g1.jpg",

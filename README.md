@@ -2,7 +2,7 @@
 
 [![Live](https://img.shields.io/badge/live-tammam--bt.github.io-087556?style=flat-square&logo=githubpages&logoColor=white)](https://tammam-bt.github.io)
 
-Freelance portfolio for **Tammam Benbettaieb**, software and automation engineer in Tunisia: websites, Shopify stores and Python automation.
+Freelance portfolio for **Tammam Bettayeb**, software and automation engineer in Tunisia: websites, Shopify stores and Python automation.
 
 ## Tech Stack
 
@@ -26,9 +26,9 @@ Push to `main`; GitHub Pages serves the repository root.
 ├── index.html           # Page shell, meta and Open Graph tags
 ├── css/styles.css       # Light design system (tokens on :root)
 ├── js/main.js           # Rendering, hash routes (#<project id>), pop-up, image viewer
-├── data/projects.json   # All content: person, lanes, projects
+├── data/projects.json   # All content: person, lanes, projects, films
 └── assets/
-    ├── media/           # Project screenshots and demo videos
+    ├── media/           # Screenshots, demo videos and films, portrait
     ├── og-image.jpg     # Social preview (1200×630)
     └── favicon.svg
 ```

@@ -1,11 +1,11 @@
 /* ==========================================================================
-   Tammam Benbettaieb · portfolio
+   Tammam Bettayeb · portfolio
 
-   1. Tokens (colour, type, shape)      6. Project cards
+   1. Tokens (colour, type, shape)      6. Work: the card grid
    2. Base and reset                    7. Closing: quotes and contact
    3. Layout and header                 8. Project page
    4. Shared components                 9. Pop-up and image viewer
-   5. Home: hero and needs picker      10. Motion preferences
+   5. Home: hero, proof and picker     10. Motion preferences
 
    Every colour is a token on :root. Component rules only use var(--…).
    Type: Schibsted Grotesk headings, Onest text, DM Mono labels. Accent: emerald.
@@ -21,7 +21,6 @@
   --surface: #ffffff;
   --surface-2: #f5f7f9;
   --stage: #eef2f5;
-  --stage-hover: #e5eaef;
   --fill: #eef1f4;
   --fill-hover: #e4e8ed;
   --line: #e3e7ec;
@@ -37,6 +36,10 @@
   --scrim: rgba(15, 23, 42, 0.56);
   --shadow-pop: 0 28px 70px -28px rgba(15, 23, 42, 0.5), 0 0 0 1px rgba(15, 23, 42, 0.06);
   --focus: #0f172a;
+
+  /* Proof marks: Upwork green and the rating stars (both ≥ 3:1 on --bg) */
+  --upwork: #14a800;
+  --star: #c47f00;
 
   /* Image viewer (dark stage for photos and screenshots) */
   --viewer-bg: #0b1220;
@@ -285,18 +288,6 @@ a:hover { color: var(--accent-strong); }
 .btn-lg { min-height: 52px; padding: 0 24px; font-size: 16px; }
 .btn-icon { width: 44px; padding: 0; }
 
-.text-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  min-height: 44px;
-  font-weight: 600;
-  text-decoration: none;
-}
-.text-link:hover { text-decoration: underline; }
-.text-link .icon { transition: transform 0.15s ease; }
-.text-link:hover .icon { transform: translateX(3px); }
-
 .status-dot {
   display: inline-block;
   width: 8px;
@@ -452,26 +443,12 @@ a:hover { color: var(--accent-strong); }
   background: var(--stage);
 }
 
-.stage--card {
-  aspect-ratio: 16 / 10;
-  padding: 40px 7% 0;
-  transition: background-color 0.2s ease;
-}
-.stage--card > .frame {
-  width: 100%;
-  flex: none;
-  transition: transform 0.35s var(--ease);
-}
-.stage--card > .frame--browser { border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
-.stage--card.stage--plain { align-items: center; padding-bottom: 28px; }
-.stage--card.stage--phones { gap: 6%; }
-.stage--card.stage--phones > .frame { width: 31%; }
-
+/* "Demo" marker over a card preview */
 .badge {
   position: absolute;
   z-index: 1;
-  top: 9px;
-  left: 7%;
+  top: 10px;
+  right: 10px;
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -487,7 +464,7 @@ a:hover { color: var(--accent-strong); }
 }
 .badge .icon { color: var(--accent); }
 
-/* A stage that shows the whole frame (pop-up, project page, hero) */
+/* A stage that shows the whole frame (pop-up, project page) */
 .stage--fit { align-items: center; padding: 24px; }
 .stage--fit > .frame--browser,
 .stage--fit > .frame--plain { width: 100%; max-width: 920px; }
@@ -495,35 +472,19 @@ a:hover { color: var(--accent-strong); }
 .stage--fit > .frame--phone { height: 100%; }
 .stage--fit > .frame--phone .frame-screen { height: 100%; width: auto; aspect-ratio: 390 / 844; }
 
-.frame-action {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-  flex: none;
-  min-width: 44px;
-  min-height: 44px;
-  margin: -6px -10px -6px 0;
-  padding: 0 10px;
-  border: 0;
-  background: transparent;
-  color: var(--muted);
-  font-size: 12.5px;
-  font-weight: 600;
-  cursor: pointer;
-}
-.frame-action:hover { color: var(--ink); }
+/* 5. Home: hero, proof items and the needs picker --------------------------- */
 
-/* 5. Home: hero and the needs picker ------------------------------------------ */
+.hero { padding-block: 48px 56px; }
 
-.hero { padding-block: 56px 48px; }
-
+/* The headline and picker on the left, the portrait (380px at most) on the right */
 .hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 40px 56px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 380px);
+  gap: 40px 72px;
   align-items: center;
 }
+.hero-copy,
+.hero-media { min-width: 0; }
 
 .eyebrow {
   display: inline-flex;
@@ -535,52 +496,79 @@ a:hover { color: var(--accent-strong); }
   color: var(--ink-2);
 }
 
-.hero-title { font-size: clamp(32px, 2.9vw, 42px); }
+/* Sized so the headline stays within 3 lines at 1440 and 4 at 390 */
+.hero-title { font-size: clamp(34px, 3.2vw, 46px); }
 .hero-line {
   margin-top: 14px;
-  max-width: 46ch;
+  max-width: 54ch;
   font-size: 18px;
   line-height: 1.55;
   color: var(--ink-2);
 }
 
-.credentials {
+/* Proof: two compact Upwork items, each a link to his profile */
+.proof {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  gap: 0 18px;
-  margin-top: 6px;
-  font-size: 14px;
-  color: var(--muted);
+  gap: 0 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
-.credentials a {
+.proof-item {
   display: inline-flex;
   align-items: center;
+  gap: 7px;
   min-height: 44px;
-  color: var(--muted);
-  text-decoration: underline;
-  text-decoration-color: var(--line-strong);
+  color: var(--ink);
+  font-size: 14.5px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
 }
-.credentials a:hover { color: var(--ink); text-decoration-color: currentColor; }
+.proof-item:hover { color: var(--ink); }
+.proof-item:hover .proof-text { text-decoration: underline; text-underline-offset: 3px; }
+.upwork-mark { flex: none; fill: var(--upwork); }
+.stars { display: inline-flex; gap: 1px; }
+.star { flex: none; fill: var(--star); }
 
-.demo { min-width: 0; }
-.demo .stage { padding: 28px; }
-.demo-caption {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0 16px;
-  margin-top: 10px;
-  font-size: 14px;
-  line-height: 1.5;
-  color: var(--muted);
+/* The portrait card: photo, name, role, proof */
+.me { display: flex; flex-direction: column; gap: 16px; }
+.me-photo {
+  display: block;
+  flex: none;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: 50% 30%;
+  border-radius: var(--r-3);
+  background: var(--fill);
 }
-.demo-caption strong { color: var(--ink); font-weight: 600; }
-.demo-caption .text-link { font-size: 14.5px; }
+.me-text { display: flex; flex-direction: column; min-width: 0; }
+.me-name {
+  font-family: var(--font-display);
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: -0.012em;
+  line-height: 1.25;
+  color: var(--ink);
+}
+.me-role { margin-top: 3px; font-size: 15px; line-height: 1.45; color: var(--muted); text-wrap: balance; }
+.me .proof { margin-top: 6px; }
 
-/* The needs picker: a list of big choices */
-.picker { margin-top: 28px; }
+.avatar {
+  display: block;
+  flex: none;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+  background: var(--fill);
+}
+
+/* The needs picker: big choices, each with a hint and its project count */
+.picker { margin-top: 28px; max-width: 680px; }
 .picker-title { margin-bottom: 10px; font-size: 15px; font-weight: 600; color: var(--ink); }
 .need-list {
   overflow: hidden;
@@ -593,9 +581,9 @@ a:hover { color: var(--accent-strong); }
   align-items: center;
   gap: 14px;
   width: 100%;
-  min-height: 62px;
+  min-height: 56px;
   margin: 0;
-  padding: 12px 16px 12px 18px;
+  padding: 11px 16px 11px 18px;
   border: 0;
   border-top: 1px solid var(--line);
   background: var(--surface);
@@ -606,16 +594,16 @@ a:hover { color: var(--accent-strong); }
 .need:first-child { border-top: 0; }
 .need:hover { background: var(--surface-2); }
 .need:focus-visible { outline-offset: -3px; }
+.need-text { display: flex; flex-direction: column; gap: 1px; flex: 1 1 auto; min-width: 0; }
 .need-phrase {
-  flex: 1 1 auto;
-  min-width: 0;
   font-family: var(--font-display);
-  font-size: 18px;
+  font-size: 17.5px;
   font-weight: 600;
   letter-spacing: -0.012em;
   line-height: 1.3;
   color: var(--ink);
 }
+.need-hint { font-size: 13.5px; line-height: 1.4; color: var(--muted); }
 .need-count { flex: none; white-space: nowrap; }
 .need .icon { color: var(--muted); transition: transform 0.15s ease, color 0.15s ease; }
 .need:hover .icon { transform: translateX(3px); color: var(--ink); }
@@ -627,24 +615,34 @@ a:hover { color: var(--accent-strong); }
 .need[aria-pressed="true"] .need-count,
 .need[aria-pressed="true"] .icon { color: var(--accent); }
 
+/* One column: the photo comes first so it is in the first screen */
 @media (max-width: 960px) {
-  .hero-grid { grid-template-columns: minmax(0, 1fr); }
-  .hero { padding-block: 32px 36px; }
+  .hero { padding-block: 24px 40px; }
+  .hero-grid { grid-template-columns: minmax(0, 1fr); gap: 26px; }
+  .hero-media { order: -1; }
+  .me { flex-direction: row; align-items: center; gap: 18px; }
+  .me-photo { width: clamp(120px, 33vw, 172px); }
+  .me .proof { flex-direction: column; margin-top: 4px; }
 }
 
 @media (max-width: 520px) {
   .hero-title { font-size: 30px; }
   .hero-line { font-size: 16.5px; }
-  .need { min-height: 58px; padding: 10px 12px 10px 14px; gap: 10px; }
-  .need-phrase { font-size: 16.5px; }
-  .demo .stage { padding: 12px; }
+  .eyebrow { margin-bottom: 14px; }
+  .me { gap: 16px; }
+  .me-name { font-size: 17.5px; }
+  .me-role { font-size: 14px; }
+  .proof-item { font-size: 14px; }
+  .need { min-height: 56px; padding: 10px 12px 10px 14px; gap: 10px; }
+  .need-phrase { font-size: 16px; }
+  .need-hint { font-size: 13px; }
   .need-unit { display: none; }
 }
 
-/* 6. Project cards ------------------------------------------------------------ */
+/* 6. Work: the card grid ---------------------------------------------------- */
 
 .work {
-  padding-block: 40px 96px;
+  padding-block: 40px 44px;
   border-top: 1px solid var(--line);
   scroll-margin-top: calc(var(--header-h) + env(safe-area-inset-top, 0px));
 }
@@ -662,40 +660,102 @@ a:hover { color: var(--accent-strong); }
 .work-reset { min-height: 44px; padding: 0 12px; margin-left: -12px; color: var(--accent); font-weight: 600; }
 .work-reset:hover { color: var(--accent-strong); background: var(--accent-soft); }
 
+/* Three across on desktop. Each card is a subgrid, so titles, meta lines,
+   one-liners and results line up across a row. */
 .cards {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 56px 32px;
-  list-style: none;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 28px;
+  margin: 0;
   padding: 0;
+  list-style: none;
+}
+.card {
+  position: relative;
+  display: grid;
+  grid-row: span 5;
+  grid-template-rows: subgrid;
+  row-gap: 0;
+  min-width: 0;
+  padding-bottom: 52px;
+}
+@supports not (grid-template-rows: subgrid) {
+  .card { display: flex; flex-direction: column; }
 }
 
-.card { position: relative; display: flex; flex-direction: column; gap: 18px; min-width: 0; }
-.card:hover .stage--card { background: var(--stage-hover); }
-.card:hover .stage--card > .frame { transform: translateY(-5px); }
-.card-body { display: flex; flex-direction: column; gap: 6px; }
-.card-title { font-size: 21px; line-height: 1.22; }
+.card-title { margin-top: 16px; font-size: 19px; line-height: 1.25; }
 .card-title a { color: var(--ink); text-decoration: none; }
-.card-title a::after { content: ""; position: absolute; inset: 0; z-index: 2; border-radius: var(--r-3); }
+.card-title a::after { content: ""; position: absolute; inset: 0 0 36px; z-index: 2; border-radius: var(--r-2); }
 .card-title a:focus-visible { outline: none; }
 .card-title a:focus-visible::after { outline: 2px solid var(--focus); outline-offset: 6px; }
 .card:hover .card-title a { text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 4px; }
-.card-oneliner { font-size: 15.5px; color: var(--ink-2); }
+.card-meta { margin-top: 5px; }
+.card-oneliner { margin-top: 8px; font-size: 15px; line-height: 1.5; color: var(--ink-2); }
 .card-result {
-  margin-top: 8px;
-  padding-top: 12px;
+  margin-top: 12px;
+  padding-top: 10px;
   border-top: 1px solid var(--line);
-  font-size: 15px;
-  line-height: 1.55;
-  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--muted);
 }
-.result-label { display: block; margin-bottom: 3px; color: var(--accent); }
 
-@media (max-width: 719px) {
-  .cards { grid-template-columns: minmax(0, 1fr); gap: 44px; }
-  .stage--card { padding-top: 38px; }
-  .card { gap: 14px; }
-  .card-title { font-size: 20px; }
+/* The preview: one 16:10 box, filled edge to edge */
+.preview {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--r-2);
+  background: var(--fill);
+  transition: border-color 0.2s ease;
+}
+.preview-shot { position: relative; flex: 1 1 auto; min-height: 0; overflow: hidden; }
+.preview-shot img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  transition: transform 0.4s var(--ease);
+}
+/* Two phone screens side by side, split by a hairline */
+.preview-shot--pair { background: var(--line-strong); }
+.preview-shot--pair img { width: calc(50% - 1px); }
+.preview-shot--pair img + img { left: auto; right: 0; }
+.card:hover .preview { border-color: var(--line-strong); }
+.card:hover .preview-shot img { transform: scale(1.025); }
+
+/* The domain sits over the image's top-left corner */
+.preview-tag {
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  left: 10px;
+  max-width: calc(100% - 96px);
+  overflow: hidden;
+  padding: 4px 8px;
+  border-radius: var(--r-1);
+  background: var(--surface);
+  color: var(--ink);
+  font-family: var(--font-label);
+  font-size: 11.5px;
+  line-height: 1.25;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (max-width: 999px) {
+  .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 24px; }
+}
+@media (max-width: 639px) {
+  .cards { grid-template-columns: minmax(0, 1fr); }
+  .card { padding-bottom: 40px; }
+  .card-title a::after { inset: 0 0 24px; }
 }
 
 /* 7. Closing: what clients said, then contact --------------------------------- */
@@ -735,6 +795,10 @@ a:hover { color: var(--accent-strong); }
 }
 .contact-title { font-size: clamp(28px, 2.8vw, 38px); }
 .contact-avail { display: flex; align-items: center; gap: 8px; margin-top: 12px; font-size: 15px; color: var(--ink-2); }
+.contact-person { display: flex; align-items: center; gap: 14px; margin-top: 18px; }
+.avatar--contact { width: 56px; height: 56px; }
+.contact-name { font-size: 16px; font-weight: 600; line-height: 1.3; color: var(--ink); }
+.contact-person .contact-avail { margin-top: 2px; font-size: 14.5px; }
 .contact-card .btn-lg { margin-top: 22px; }
 
 .channels { list-style: none; padding: 0; margin-top: 26px; border-top: 1px solid var(--line); }
@@ -754,7 +818,6 @@ a:hover { color: var(--accent-strong); }
 .channel a.channel-value:hover { color: var(--accent); text-decoration: underline; }
 .channel .icon { color: var(--muted); }
 .channel-copy { min-width: 76px; }
-.channel-mail { color: var(--accent); font-size: 14px; font-weight: 600; }
 
 @media (max-width: 860px) {
   .closing { padding-block: 56px 64px; }
@@ -925,6 +988,12 @@ a:hover { color: var(--accent-strong); }
 .popup-media .stage--fit > .frame--browser,
 .popup-media .stage--fit > .frame--plain { width: min(100%, calc((52vh - 90px) * 1.6)); }
 .popup-media .stage--fit.stage--phone { height: min(460px, 52vh); }
+/* A demo film carries its own background and frames: no plate, a little more width */
+.stage--fit.stage--film,
+.popup-media .stage--fit.stage--film,
+.project-media .stage--fit.stage--film { padding: 0; background: none; }
+.stage--film > .frame--plain { border-radius: var(--r-3); }
+.popup-media .stage--film > .frame--plain { width: min(100%, calc((52vh - 40px) * 16 / 9)); }
 .popup-content { padding: 22px 24px 28px; }
 .popup-title { font-size: clamp(24px, 2.4vw, 30px); }
 .popup-meta { margin-top: 8px; font-size: 14.5px; line-height: 1.5; color: var(--muted); }
