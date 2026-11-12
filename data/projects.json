@@ -1480,9 +1480,19 @@
      "kind": "desktop"
     }
    ],
-   "video": "10-fannen-demo.mp4",
-   "videoCaption": "Static preview with sample data: filter the gallery, open an artwork, the story page and the sign-in.",
-   "featured": false
+   "video": "10-fannen-film.mp4",
+   "videoCaption": "Demo film: browse and message an artisan, the artisan's dashboard, the PHP API and MySQL behind it, and the role checks. Example data.",
+   "featured": false,
+   "film": {
+    "wide": {
+     "src": "10-fannen-film.mp4",
+     "poster": "10-fannen-film.jpg"
+    },
+    "square": {
+     "src": "10-fannen-film-1x1.mp4",
+     "poster": "10-fannen-film-1x1.jpg"
+    }
+   }
   },
   {
    "num": "11",
