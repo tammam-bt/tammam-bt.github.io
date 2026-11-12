@@ -1239,9 +1239,19 @@
      "kind": "desktop"
     }
    ],
-   "video": "08-telegram-demo.mp4",
-   "videoCaption": "Book a dentist appointment, ask what is on, move it to Friday, then cancel it, all by message.",
-   "featured": false
+   "video": "08-calendar-film.mp4",
+   "videoCaption": "Demo film: how a chat message becomes a calendar event, the four actions, and the guards that make AI output safe to act on. Example data.",
+   "featured": false,
+   "film": {
+    "wide": {
+     "src": "08-calendar-film.mp4",
+     "poster": "08-calendar-film.jpg"
+    },
+    "square": {
+     "src": "08-calendar-film-1x1.mp4",
+     "poster": "08-calendar-film-1x1.jpg"
+    }
+   }
   },
   {
    "num": "09",
@@ -1345,9 +1355,19 @@
      "kind": "desktop"
     }
    ],
-   "video": "09-axiom-demo.mp4",
-   "videoCaption": "A clean virtualenv: pip install axiom-ml, then train an XOR network and a logistic regression.",
-   "featured": false
+   "video": "09-axiom-film.mp4",
+   "videoCaption": "Demo film: inside the library, backprop written by hand, tests against known answers, and the predict-call benchmark.",
+   "featured": false,
+   "film": {
+    "wide": {
+     "src": "09-axiom-film.mp4",
+     "poster": "09-axiom-film.jpg"
+    },
+    "square": {
+     "src": "09-axiom-film-1x1.mp4",
+     "poster": "09-axiom-film-1x1.jpg"
+    }
+   }
   },
   {
    "num": "10",
