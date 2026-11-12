@@ -466,9 +466,19 @@
      "kind": "mobile"
     }
    ],
-   "video": "02-policlean-demo.mp4",
-   "videoCaption": "Phone demo: switch to French, open the estimate form and fill it with demo data. Nothing is submitted.",
-   "featured": true
+   "video": "02-policlean-film.mp4",
+   "videoCaption": "Demo film: the bilingual site, the estimate form filled with demo data, and the request landing in the mailbox.",
+   "featured": true,
+   "film": {
+    "wide": {
+     "src": "02-policlean-film.mp4",
+     "poster": "02-policlean-film.jpg"
+    },
+    "square": {
+     "src": "02-policlean-film-1x1.mp4",
+     "poster": "02-policlean-film-1x1.jpg"
+    }
+   }
   },
   {
    "num": "03",
@@ -600,9 +610,19 @@
      "kind": "mobile"
     }
    ],
-   "video": null,
-   "videoCaption": null,
-   "featured": true
+   "video": "03-livestock-film.mp4",
+   "videoCaption": "Demo film: the farm app user story by user story, from offline records to the whole family. Example data only.",
+   "featured": true,
+   "film": {
+    "wide": {
+     "src": "03-livestock-film.mp4",
+     "poster": "03-livestock-film.jpg"
+    },
+    "square": {
+     "src": "03-livestock-film-1x1.mp4",
+     "poster": "03-livestock-film-1x1.jpg"
+    }
+   }
   },
   {
    "num": "04",
@@ -707,9 +727,19 @@
      "kind": "desktop"
     }
    ],
-   "video": null,
-   "videoCaption": null,
-   "featured": true
+   "video": "04-sorare-film.mp4",
+   "videoCaption": "Demo film: how the bot watches the market, stays under the API limit and sends alerts to Discord. Example data.",
+   "featured": true,
+   "film": {
+    "wide": {
+     "src": "04-sorare-film.mp4",
+     "poster": "04-sorare-film.jpg"
+    },
+    "square": {
+     "src": "04-sorare-film-1x1.mp4",
+     "poster": "04-sorare-film-1x1.jpg"
+    }
+   }
   },
   {
    "num": "05",
@@ -822,9 +852,19 @@
      "kind": "chart"
     }
    ],
-   "video": null,
-   "videoCaption": null,
-   "featured": true
+   "video": "05-bugsinpy-film.mp4",
+   "videoCaption": "Demo film: the audit pipeline, the defects found and fixed, and the reproduction rate before and after.",
+   "featured": true,
+   "film": {
+    "wide": {
+     "src": "05-bugsinpy-film.mp4",
+     "poster": "05-bugsinpy-film.jpg"
+    },
+    "square": {
+     "src": "05-bugsinpy-film-1x1.mp4",
+     "poster": "05-bugsinpy-film-1x1.jpg"
+    }
+   }
   },
   {
    "num": "06",
@@ -939,9 +979,19 @@
      "kind": "desktop"
     }
    ],
-   "video": "06-sahara-demo.mp4",
-   "videoCaption": "Desktop demo: switch to French and Arabic, then run a booking up to the summary. Nothing is sent.",
-   "featured": false
+   "video": "06-sahara-film.mp4",
+   "videoCaption": "Demo film: a booking in three steps, handed to the owner on WhatsApp, in five languages. Example data.",
+   "featured": false,
+   "film": {
+    "wide": {
+     "src": "06-sahara-film.mp4",
+     "poster": "06-sahara-film.jpg"
+    },
+    "square": {
+     "src": "06-sahara-film-1x1.mp4",
+     "poster": "06-sahara-film-1x1.jpg"
+    }
+   }
   },
   {
    "num": "07",
@@ -1079,9 +1129,19 @@
      "kind": "mobile"
     }
    ],
-   "video": "07-tunicompare-demo.mp4",
-   "videoCaption": "Browse the featured price cards, scroll the screens list, then open a laptop row with three prices.",
-   "featured": true
+   "video": "07-tunicompare-film.mp4",
+   "videoCaption": "Demo film: the live site, then how the scrapers and the matcher join one product across three stores.",
+   "featured": true,
+   "film": {
+    "wide": {
+     "src": "07-tunicompare-film.mp4",
+     "poster": "07-tunicompare-film.jpg"
+    },
+    "square": {
+     "src": "07-tunicompare-film-1x1.mp4",
+     "poster": "07-tunicompare-film-1x1.jpg"
+    }
+   }
   },
   {
    "num": "08",
