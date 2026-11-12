@@ -1584,9 +1584,19 @@
      "kind": "chart"
     }
    ],
-   "video": null,
-   "videoCaption": null,
-   "featured": false
+   "video": "11-marcaria-film.mp4",
+   "videoCaption": "Demo film: how the scraper opens each extension's rules pop-up, waits out the bot check, and merges three catalogue sections into one clean CSV.",
+   "featured": false,
+   "film": {
+    "wide": {
+     "src": "11-marcaria-film.mp4",
+     "poster": "11-marcaria-film.jpg"
+    },
+    "square": {
+     "src": "11-marcaria-film-1x1.mp4",
+     "poster": "11-marcaria-film-1x1.jpg"
+    }
+   }
   },
   {
    "num": "12",
