@@ -1687,9 +1687,19 @@
      "kind": "desktop"
     }
    ],
-   "video": null,
-   "videoCaption": null,
-   "featured": false
+   "video": "12-competitions-film.mp4",
+   "videoCaption": "Demo film: the stacking ensemble behind the DataLeaders 2.0 win, the Grand Prize certificate, and the full competition record.",
+   "featured": false,
+   "film": {
+    "wide": {
+     "src": "12-competitions-film.mp4",
+     "poster": "12-competitions-film.jpg"
+    },
+    "square": {
+     "src": "12-competitions-film-1x1.mp4",
+     "poster": "12-competitions-film-1x1.jpg"
+    }
+   }
   }
  ]
 }
