@@ -24,11 +24,11 @@ Push to `main`; GitHub Pages serves the repository root.
 
 ```
 ├── index.html           # Page shell, meta and Open Graph tags
-├── css/styles.css       # Light design system (tokens on :root)
-├── js/main.js           # Rendering, hash routes (#<project id>), pop-up, image viewer
-├── data/projects.json   # All content: person, lanes, projects, films
+├── css/styles.css       # Dark forest design system (tokens on :root)
+├── js/main.js           # Rendering, hash routes (#<project id>), devices, image viewer
+├── data/projects.json   # All content: person, acts, reviews, projects, films
 └── assets/
-    ├── media/           # Screenshots, demo videos and films, portrait
+    ├── media/           # Screenshots, demo videos, films, loop film, photo, reviews, slides
     ├── og-image.jpg     # Social preview (1200×630)
     └── favicon.svg
 ```

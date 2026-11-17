@@ -7,29 +7,257 @@
   "availability": "Available to start immediately",
   "contact": [
    {
-    "label": "Upwork",
-    "url": "https://upwork.com/freelancers/~01f89f51335cb70c85"
-   },
-   {
     "label": "Email",
-    "url": "mailto:tambett10@gmail.com"
-   },
-   {
-    "label": "GitHub",
-    "url": "https://github.com/tammam-bt"
-   },
-   {
-    "label": "LinkedIn",
-    "url": "https://linkedin.com/in/tammam-bettayeb"
+    "url": "mailto:tambett10@gmail.com",
+    "text": "tambett10@gmail.com"
    },
    {
     "label": "WhatsApp",
-    "url": "https://wa.me/21693290920"
+    "url": "https://wa.me/21693290920",
+    "text": "+216 93 290 920"
+   },
+   {
+    "label": "LinkedIn",
+    "url": "https://linkedin.com/in/tammam-bettayeb",
+    "text": "tammam-bettayeb"
+   },
+   {
+    "label": "GitHub",
+    "url": "https://github.com/tammam-bt",
+    "text": "tammam-bt"
+   },
+   {
+    "label": "Upwork",
+    "url": "https://upwork.com/freelancers/~01f89f51335cb70c85",
+    "text": "Tammam B."
    }
   ],
   "portrait": "tammam-portrait-4x5.jpg",
-  "avatar": "tammam-avatar.jpg"
+  "avatar": "tammam-avatar.jpg",
+  "photo": {
+   "file": "tammam-cutout.webp",
+   "width": 770,
+   "height": 1293,
+   "alt": "Tammam Bettayeb in a black suit"
+  }
  },
+ "loop": {
+  "hd": "loop-1080.mp4",
+  "sd": "loop-720.mp4",
+  "poster": "loop-poster.jpg",
+  "vertical": {
+   "hd": "loop-vertical-1080.mp4",
+   "sd": "loop-vertical-720.mp4",
+   "poster": "loop-vertical-poster.jpg"
+  },
+  "clean": {
+   "hd": "loop-clean-1080.mp4",
+   "sd": "loop-clean-720.mp4",
+   "poster": "loop-clean-poster.jpg"
+  },
+  "timeline": {
+   "loop": 13.4,
+   "lead": "I build",
+   "atStart": {
+    "word": "websites."
+   },
+   "words": [
+    {
+     "start": 4.67,
+     "landed": 4.92,
+     "duration": 0.25,
+     "word": "web apps."
+    },
+    {
+     "start": 6.17,
+     "landed": 6.42,
+     "duration": 0.25,
+     "word": "bots and data",
+     "word2": "pipelines."
+    },
+    {
+     "start": 10.22,
+     "landed": 10.47,
+     "duration": 0.25,
+     "word": "AI solutions."
+    },
+    {
+     "start": 13.1,
+     "landed": 13.35,
+     "duration": 0.25,
+     "word": "websites."
+    }
+   ],
+   "captions": [
+    {
+     "text": "targetsunlimited.com",
+     "in": 13.25,
+     "inDuration": 0.3,
+     "out": 1.2,
+     "outDuration": 0.15,
+     "device": "laptop"
+    },
+    {
+     "text": "saharacamp.netlify.app",
+     "in": 1.35,
+     "inDuration": 0.3,
+     "out": 2.45,
+     "outDuration": 0.15,
+     "device": "laptop"
+    },
+    {
+     "text": "policleanservices.com",
+     "in": 2.6,
+     "inDuration": 0.3,
+     "out": 3.7,
+     "outDuration": 0.15,
+     "device": "laptop"
+    },
+    {
+     "text": "fannentn.netlify.app",
+     "in": 3.85,
+     "inDuration": 0.3,
+     "out": 4.8,
+     "outDuration": 0.15,
+     "device": "laptop"
+    },
+    {
+     "text": "Private client platform",
+     "in": 5.07,
+     "inDuration": 0.3,
+     "out": 6.15,
+     "outDuration": 0.15,
+     "device": "phone"
+    },
+    {
+     "text": "Private client job",
+     "in": 6.57,
+     "inDuration": 0.3,
+     "out": 7.67,
+     "outDuration": 0.15,
+     "device": "laptop"
+    },
+    {
+     "text": "tunicompare.vercel.app",
+     "in": 7.85,
+     "inDuration": 0.3,
+     "out": 8.97,
+     "outDuration": 0.15,
+     "device": "laptop"
+    },
+    {
+     "text": "Private client job",
+     "in": 9.15,
+     "inDuration": 0.3,
+     "out": 10.15,
+     "outDuration": 0.15,
+     "device": "laptop"
+    },
+    {
+     "text": "Personal project",
+     "in": 10.62,
+     "inDuration": 0.3,
+     "out": 11.85,
+     "outDuration": 0.15,
+     "device": "phone"
+    },
+    {
+     "text": "Published ML library",
+     "in": 12.12,
+     "inDuration": 0.3,
+     "out": 13.1,
+     "outDuration": 0.15,
+     "device": "laptop"
+    }
+   ]
+  }
+ },
+ "acts": [
+  {
+   "id": "websites",
+   "lead": "I build",
+   "word": "websites.",
+   "projects": [
+    "targets-unlimited",
+    "sahara-camp",
+    "policlean",
+    "fannen-tn",
+    "livestock-records"
+   ]
+  },
+  {
+   "id": "bots",
+   "lead": "I build",
+   "word": "bots and data pipelines.",
+   "projects": [
+    "sorare-trading-bot",
+    "tunicompare",
+    "marcaria-scraper",
+    "bugsinpy-audit"
+   ]
+  },
+  {
+   "id": "ai",
+   "lead": "I build",
+   "word": "AI solutions.",
+   "projects": [
+    "calendar-assistant",
+    "axiom-ml",
+    "competitions"
+   ]
+  }
+ ],
+ "reviews": [
+  {
+   "id": "review-targets-printify",
+   "file": "reviews/review-targets-printify.png",
+   "width": 516,
+   "height": 209,
+   "alt": "Upwork review, 5.0, Printify Setup: Tammam is what we have all been looking for! Smart, Educated, Creative, Flexible to implement new ideas, and well disciplined."
+  },
+  {
+   "id": "review-targets-store-rebuild",
+   "file": "reviews/review-targets-store-rebuild.png",
+   "width": 522,
+   "height": 184,
+   "alt": "Upwork review, 5.0, Web Site Update And Total Makeover: Tammam is an excellent in the computer tech world! He is very detailed oriented and has exceptional creative talent."
+  },
+  {
+   "id": "review-benchmark-part-b",
+   "file": "reviews/review-benchmark-part-b.png",
+   "width": 522,
+   "height": 209,
+   "alt": "Upwork review, 5.0, Benchmark run Part-B in python: Excellent experience working with this freelancer. He demonstrated professionalism, strong technical expertise, and great attention to detail throughout the project."
+  },
+  {
+   "id": "review-bugsinpy-audit",
+   "file": "reviews/review-bugsinpy-audit.png",
+   "width": 509,
+   "height": 287,
+   "alt": "Upwork review, 5.0: It was a pleasure working with Tammam. He demonstrated professionalism, strong attention to detail, and a willingness to take on challenges."
+  },
+  {
+   "id": "review-farm-app",
+   "file": "reviews/review-farm-app.png",
+   "width": 440,
+   "height": 147,
+   "alt": "Upwork review, 5.0, Create App for Farm: Very good communication and worked quickly."
+  },
+  {
+   "id": "message-sorare-envisioned",
+   "file": "reviews/message-sorare-envisioned.png",
+   "width": 525,
+   "height": 145,
+   "alt": "Client message on Upwork: First of all, I want to thank you very much! The bot and all its configuration options are exactly what I had envisioned."
+  },
+  {
+   "id": "message-sorare-running-great",
+   "file": "reviews/message-sorare-running-great.png",
+   "width": 496,
+   "height": 145,
+   "alt": "Client message on Upwork: Hi Tammam, thank you so much for digging into this and fixing it. Everything is running great on my end."
+  }
+ ],
  "lanes": [
   {
    "id": "web",
@@ -342,12 +570,26 @@
      "poster": "01-targets-film-1x1.jpg"
     }
    },
-   "featured": true
+   "featured": true,
+   "strength": {
+    "before": "0.6%",
+    "after": "2%",
+    "label": "conversion rate on a rebuilt $1M+ store"
+   },
+   "screens": {
+    "laptop": "01-targets-demo.mp4",
+    "phone": "01-targets-g4.jpg"
+   },
+   "reviews": [
+    "review-targets-store-rebuild",
+    "review-targets-printify"
+   ]
   },
   {
    "num": "02",
    "id": "policlean",
    "title": "PoliClean Services bilingual website",
+   "name": "PoliClean Services",
    "type": "Client work",
    "year": "2026",
    "role": "Sole developer: design, build, hosting setup, DNS move and handover",
@@ -478,6 +720,14 @@
      "src": "02-policlean-film-1x1.mp4",
      "poster": "02-policlean-film-1x1.jpg"
     }
+   },
+   "strength": {
+    "big": "EN + FR",
+    "label": "every quote request lands straight in their inbox"
+   },
+   "screens": {
+    "phone": "02-policlean-g3.jpg",
+    "phoneDemo": "02-policlean-demo.mp4"
    }
   },
   {
@@ -622,7 +872,20 @@
      "src": "03-livestock-film-1x1.mp4",
      "poster": "03-livestock-film-1x1.jpg"
     }
-   }
+   },
+   "strength": {
+    "big": "6 days",
+    "label": "to deliver, on the agreed date, with a 5.0 review"
+   },
+   "screens": {
+    "phones": [
+     "03-livestock-g1.jpg",
+     "03-livestock-g3.jpg"
+    ]
+   },
+   "reviews": [
+    "review-farm-app"
+   ]
   },
   {
    "num": "04",
@@ -739,7 +1002,23 @@
      "src": "04-sorare-film-1x1.mp4",
      "poster": "04-sorare-film-1x1.jpg"
     }
-   }
+   },
+   "strength": {
+    "big": "0 missed",
+    "label": "of 588,748 market events in 24 h, alerts in 0.46 s"
+   },
+   "screens": {
+    "slides": [
+     "slides/sorare-trading-bot-2.webp",
+     "slides/sorare-trading-bot-4.webp",
+     "slides/sorare-trading-bot-3.webp"
+    ],
+    "slideBg": "#4b4fd6"
+   },
+   "reviews": [
+    "message-sorare-envisioned",
+    "message-sorare-running-great"
+   ]
   },
   {
    "num": "05",
@@ -864,12 +1143,29 @@
      "src": "05-bugsinpy-film-1x1.mp4",
      "poster": "05-bugsinpy-film-1x1.jpg"
     }
-   }
+   },
+   "strength": {
+    "big": "476 of 501",
+    "label": "bugs confirmed, each with its evidence"
+   },
+   "screens": {
+    "slides": [
+     "slides/bugsinpy-audit-1.webp",
+     "slides/bugsinpy-audit-2.webp",
+     "slides/bugsinpy-audit-4.webp"
+    ],
+    "slideBg": "#1f7a5a"
+   },
+   "reviews": [
+    "review-bugsinpy-audit",
+    "review-benchmark-part-b"
+   ]
   },
   {
    "num": "06",
    "id": "sahara-camp",
    "title": "Sahara Camp multilingual booking site",
+   "name": "Sahara Camp",
    "type": "Personal project",
    "year": "2026",
    "role": "Sole developer (all 17 commits, 3 to 8 July 2026)",
@@ -991,6 +1287,14 @@
      "src": "06-sahara-film-1x1.mp4",
      "poster": "06-sahara-film-1x1.jpg"
     }
+   },
+   "strength": {
+    "big": "5 languages",
+    "label": "bookings arrive as ready-written WhatsApp messages"
+   },
+   "screens": {
+    "laptop": "06-sahara-demo.mp4",
+    "phone": "06-sahara-g2.jpg"
    }
   },
   {
@@ -1141,6 +1445,15 @@
      "src": "07-tunicompare-film-1x1.mp4",
      "poster": "07-tunicompare-film-1x1.jpg"
     }
+   },
+   "strength": {
+    "before": "52%",
+    "after": "98%",
+    "label": "of product matches correct across three stores"
+   },
+   "screens": {
+    "laptop": "07-tunicompare-demo.mp4",
+    "phone": "07-tunicompare-g5.jpg"
    }
   },
   {
@@ -1251,12 +1564,21 @@
      "src": "08-calendar-film-1x1.mp4",
      "poster": "08-calendar-film-1x1.jpg"
     }
+   },
+   "strength": {
+    "big": "1 message",
+    "label": "type it in a chat, it lands in your calendar"
+   },
+   "screens": {
+    "laptop": "08-telegram-demo.mp4",
+    "phone": "08-telegram-g2.jpg"
    }
   },
   {
    "num": "09",
    "id": "axiom-ml",
    "title": "Axiom (axiom-ml)",
+   "name": "Axiom",
    "type": "Personal project",
    "year": "2026",
    "role": "Sole developer",
@@ -1367,12 +1689,20 @@
      "src": "09-axiom-film-1x1.mp4",
      "poster": "09-axiom-film-1x1.jpg"
     }
+   },
+   "strength": {
+    "big": "8–64×",
+    "label": "faster predictions than scikit-learn on small datasets"
+   },
+   "screens": {
+    "laptop": "09-axiom-demo.mp4"
    }
   },
   {
    "num": "10",
    "id": "fannen-tn",
    "title": "Fannen.tn artisan showcase",
+   "name": "Fannen.tn",
    "type": "Personal project",
    "year": "2026",
    "role": "Backend and database lead in a team of three; author of every commit in the public repo",
@@ -1492,6 +1822,12 @@
      "src": "10-fannen-film-1x1.mp4",
      "poster": "10-fannen-film-1x1.jpg"
     }
+   },
+   "strength": {
+    "sentence": "Artisans show their work, buyers message them directly"
+   },
+   "screens": {
+    "laptop": "10-fannen-demo.mp4"
    }
   },
   {
@@ -1596,12 +1932,25 @@
      "src": "11-marcaria-film-1x1.mp4",
      "poster": "11-marcaria-film-1x1.jpg"
     }
+   },
+   "strength": {
+    "big": "1,183",
+    "label": "domain extensions from a bot-protected site, in one clean CSV"
+   },
+   "screens": {
+    "slides": [
+     "slides/marcaria-scraper-1.webp",
+     "slides/marcaria-scraper-2.webp",
+     "slides/marcaria-scraper-3.webp"
+    ],
+    "slideBg": "#0e7c86"
    }
   },
   {
    "num": "12",
    "id": "competitions",
    "title": "Competition record",
+   "name": "Competitions",
    "type": "Competition",
    "year": "2025–2026",
    "role": "Entrant at DataLeaders 2.0 and Orbyx; team member at Roboday 4.0",
@@ -1699,6 +2048,18 @@
      "src": "12-competitions-film-1x1.mp4",
      "poster": "12-competitions-film-1x1.jpg"
     }
+   },
+   "strength": {
+    "big": "1st of 30+",
+    "label": "at DataLeaders 2.0, Grand Prize"
+   },
+   "screens": {
+    "slides": [
+     "12-competitions-g1.jpg",
+     "12-competitions-g3.jpg",
+     "12-competitions-g2.jpg"
+    ],
+    "slideBg": "#111111"
    }
   }
  ]
