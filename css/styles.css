@@ -201,9 +201,10 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .dv-phone .dv-screen { aspect-ratio: 9 / 19.5; border-radius: 12% / 5.6%; }
 .dv-phone .dv-island { position: absolute; top: 2.2%; left: 50%; transform: translateX(-50%); width: 30%; height: 3.4%; background: var(--dv-island); border-radius: 99px; z-index: 2; }
 .dv-group { position: relative; width: 100%; }
-.dv-group > .dv-phone { position: absolute; width: 21%; right: 1%; bottom: -4%; }
+/* Padding % is taken from the parent's width, so the bezel is set per phone width: 3.6% of the phone itself. */
+.dv-group > .dv-phone { position: absolute; width: 21%; right: 1%; bottom: -4%; padding: .76%; }
 .dv-group.dv-phones { display: flex; justify-content: center; align-items: flex-end; gap: 6%; }
-.dv-group.dv-phones > .dv-phone { position: relative; width: 34%; right: auto; bottom: auto; }
+.dv-group.dv-phones > .dv-phone { position: relative; width: 34%; right: auto; bottom: auto; padding: 1.22%; }
 .dv-group.dv-phones > .dv-phone:nth-child(2) { transform: translateY(-8%); }
 .dv-screen.dv-slides > img { object-fit: contain; object-position: center; padding: 7%; opacity: 0; transition: opacity .6s ease; }
 .dv-screen.dv-slides > img.dv-on { opacity: 1; }
